@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>友情链接 - Hexo</title>
+  <title>标签: PS3 - Hexo</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -53,7 +53,7 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://yoursite.com">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="友情链接 - Hexo | Hexo">
+  <meta property="og:title" content="标签: PS3 - Hexo | Hexo">
   <meta property="og:image" content="/img/favicon.png" />
   
 
@@ -103,7 +103,9 @@
   
     mdui-drawer-body-left
   
-   drawer-overlay-none" >
+  
+    side-content style-fix
+   drawer-overlay-none" onresize="styleChanging()">
 
 
   
@@ -123,9 +125,21 @@
         <a href="/" class="mdui-typo-headline">
           首页
         </a>
+        <span class="appbar-border-line mdui-hidden-xs"></span>
       
+      <span class="mdui-typo-title
+      "
       
-      <div class="mdui-toolbar-spacer"></div>
+        onclick="smoothScroll.animateScroll( 0 );"
+      >
+        PS3
+      </span>
+      
+      <div class="mdui-toolbar-spacer"
+        
+          onclick="smoothScroll.animateScroll( 0 );"
+        
+      ></div>
       
       
 
@@ -144,6 +158,9 @@
   </div>
 </div>
 
+      
+        <button class="mdui-btn mdui-ripple mdui-btn-icon style-fix"><i class="mdui-icon material-icons">&#xe80d;</i></button>
+      
     </div>
   </div>
 
@@ -154,8 +171,10 @@
 
   
   <div class="mdui-drawer drawer-container
+  
+    mdui-drawer-full-height mdui-drawer-close drawer-fix
   " id="drawer" style="z-index: 2001;">
-  <div class="drawer-head mdui-valign mdui-hidden-md-up">
+  <div class="drawer-head mdui-valign ">
   <div class="mdui-typo-title-opacity">首页</div>
   <div class="flex-spacer"></div>
   <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
@@ -209,7 +228,7 @@
       </div>
     
     
-      <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item mdui-collapse-item-open">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
           <div class="mdui-list-item-content">标签</div>
@@ -288,49 +307,159 @@
 
 
 
+  
+
+  <style id="side_content_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("side_content_css","/css/src/plus/side_content.min.css?I3AiJmqczd8wYmijb8bxag==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+<div id="side-content" class="mdui-color-indigo animate-drawer">
+  <div class="mdui-grid-tile" style="overflow: visible;">
+    <div class="bg">
+      <img src="/img/random/picHD_8.png" />
+    </div>
+    <div class="mdui-grid-tile-actions mdui-grid-tile-actions-top mdui-grid-tile-actions-gradient">
+      <div class="flex-spacer"></div>
+      <div class="mdui-grid-tile-buttons">
+        
+  <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-float-right" mdui-menu="{target: '#menu-page-share'}"><i class="mdui-icon material-icons">&#xe80d;</i></button>
+
+  <ul class="mdui-menu" id="menu-page-share">
+
+    
+
+    
+
+    
+
+    
+
+    
+      <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=PS3&title=PS3&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com//tags/PS3/index.html" target="_blank" class="mdui-ripple">
+              分享到QQ
+          </a>
+      </li>
+    
+
+    
+
+    
+
+    
+      <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share.php?appkey=&title=PS3&url=http://yoursite.com//tags/PS3/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+              分享到微博
+          </a>
+      </li>
+    
+
+  </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
+    <div class="author mdui-text-center">
+      何磊
+    </div>
+    <div class="name">
+      PS3
+    </div>
+    <div class="length">
+      
+      1篇文章
+    </div>
+  </div>
+</div>
+<div id="contentLocation"></div>
+
+
 
 <main>
+  <div class="posts-container column-3">
+
+</div>
+<div id="content-list" class="animate-post">
   
-  <style id="friends_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("friends_css","/css/src/pages/friends.min.css?wIf3PLMp7vZIouKx2vUuDA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-<div id="friends-page" class="mdui-container-fluid animate-post">
-  <div>
-    
-      <div class="friends-title">
-        友链页面标语，可留空
-      </div>
-    
+    <div class="content-item">
+      
+  
+<style id="index_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("index_css","/css/src/plus/index.min.css?WYKJSRDQmvHqC3U1Wgs23g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+<div class="mdui-card card-bottom-fix  mdui-center">
+  <div class="posts-title mdui-typo">
+    <a href="/2017/09/03/ceshi/" target="_self">
+      
+      这是测试文件
+    </a>
+  </div>
+  <div class="posts-line">
+    <div class="mdui-divider"></div>
+  </div>
+  <div class="posts-content">
+    ###这是标题
   </div>
   
-    <div class="mdui-row">
-      
-        
-          <div class="mdui-col-xs-6 mdui-col-md-3">
-            <div class="mdui-card friends-container">
-              <a href="对方网站地址" target="_blank" class="content">
-                <img class="avatar" src="对方头像" alt="Example"/>
-                <div class="name mdui-text-color-theme-text">
-                  Example
-                </div>
-                <div class="descr mdui-text-color-theme-text mdui-text-truncate">
-                  对方的标语或描述
-                </div>
-                <div class="spacer"></div>
-                <div class="mdui-card-actions no-padding">
-                  <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent">参观</button>
-                </div>
-              </a>
-            </div>
-          </div>
-        
-      
+    <div class="mdui-card-media">
+      <img src="/img/random/picHD_7.png"/>
     </div>
-    <button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
-  <i class="mdui-icon material-icons">&#xe5d8;</i>
-</button>
+  
+  <div class="posts-bottom">
+    
+      <div class="mdui-chip">
+        <span class="mdui-chip-icon"><i class="mdui-icon
+        
+          mdui-text-color-black-icon
+        
+         material-icons mdui-text-center">&#xe149;</i></span>
+      </div>
+      <div class="content mdui-typo">
+        
+          <a href="/categories/Diary/">
+            <span>Diary</span>
+          </a>
+        
+      </div>
+    
+    
+      <div class="mdui-chip">
+        <span class="mdui-chip-icon"><i class="mdui-icon
+        
+          mdui-text-color-black-icon
+        
+         fa fa-tags mdui-text-center"></i></span>
+      </div>
+      <div class="content mdui-typo">
+        
+          <a href="/tags/PS3/">
+            <span>PS3</span>
+          </a>
+        
+          <a href="/tags/Games/">
+            <span>Games</span>
+          </a>
+        
+      </div>
+    
+    <div class="flex-spacer"></div>
+    <div class="mdui-typo-caption-opacity mdui-valign">
+      <span>9月 03, 2017</span>
+    </div>
+  </div>
+</div>
 
+
+
+    </div>
   
 </div>
 
+
+
+
+<button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
+  <i class="mdui-icon material-icons">&#xe5d8;</i>
+</button>
 
 
 </main>
@@ -373,10 +502,115 @@
 
 
 
+  
+  <script type="text/javascript">
+    (function() {
+      var items = document.querySelectorAll("div#content-list .content-item");
+      var list = document.querySelector("div.posts-container");
+      var columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
+      var level = 4;
+      var sm = 1;
+      var column1Width = 1024;
+      var column2Width = 1400;
+      list.innerHTML = "";
+      function cleanUpdate() {
+        items = document.querySelectorAll("div#content-list .content-item");
+        list.innerHTML = '';
+        columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
+        level = 4;
+        updateList();
+      }
+      window.postListCleanUpdate = cleanUpdate;
+      function getColumnNums() {
+        if (document.body.clientWidth <= column1Width) {
+          return 1
+        }
+        if (document.body.clientWidth <= column2Width) {
+          return 2
+        }
+        return 3
+      }
+      function updateList() {
+        var ColumnNums = getColumnNums();
+        if (level == ColumnNums) return;
+        level = ColumnNums;
+        list.setAttribute("class", "column-" + ColumnNums + " posts-container animate-post")
+        Array.prototype.forEach.call(items, function(value, index) {
+          var to = index % ColumnNums;
+          columns[to].appendChild(value);
+        })
+        columns.forEach(function(value) {
+          list.appendChild(value)
+        })
+      }
+      window.addEventListener("resize", updateList);
+      updateList();
+    })()
+  </script>
 
 
 
 
+
+  <script type="text/ls-javascript" id="style-changing-script">
+  var content_flag = false;
+  var appbar = document.querySelector('div#blog-appbar')
+  var body = document.querySelector('body')
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    var divTop = document.querySelector('div#contentLocation').offsetTop
+    var contentLocation = divTop - scrollTop - 56;
+
+    if (!content_flag && contentLocation < 0 && window.innerWidth < 860) {
+      appbar.classList.add('style-fix');
+      body.classList.remove('style-fix');
+      content_flag = true;
+    } else if (content_flag && contentLocation >= 0 && window.innerWidth < 860) {
+      appbar.classList.remove('style-fix');
+      body.classList.add('style-fix');
+      content_flag = false;
+    };
+  })
+
+  function styleChanging() {
+    var hide = new mdui.Headroom('div#blog-appbar');
+    var windowWidth = window.innerWidth,
+      toLeftWidth = 860;
+    if (windowWidth < toLeftWidth) {
+      hide.enable();
+    } else {
+      hide.disable();
+    }
+  };
+  styleChanging();
+</script>
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="to-top-script">
+  /* fab */
+  (function() {
+    var pageFlag = false;
+    var fab = new mdui.Fab('#toTop');
+    fab.hide();
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        fab.show();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        fab.hide();
+        pageFlag = false;
+      }
+    });
+  })();
+</script>
 
 
 

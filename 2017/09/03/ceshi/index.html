@@ -38,7 +38,7 @@
 
   <meta name="author" content="何磊">
   
-  <meta name="keywords" content="blog, hexo, mdui">
+  <meta name="keywords" content="blog, hexo, mdui,PS3,Games">
 
   <!--iOS -->
   <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -57,7 +57,7 @@
   <meta property="og:image" content="/img/favicon.png" />
   
 
-    
+    <meta property="og:article:tag" content="PS3"> <meta property="og:article:tag" content="Games"> 
 
   <!-- Cache -->
   <meta http-equiv="Cache-Control" content="max-age=7200" />
@@ -191,6 +191,46 @@
 
   <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
     
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
+          <div class="mdui-list-item-content">分类</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+            <a href="/categories/Diary/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Diary
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+        </div>
+      </div>
+    
+    
+      <div class="mdui-collapse-item ">
+        <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+          <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
+          <div class="mdui-list-item-content">标签</div>
+          <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
+        </div>
+        <div class="mdui-collapse-item-body mdui-list">
+          
+            <a href="/tags/PS3/" class="mdui-list-item mdui-ripple" style="display: flex">
+              PS3
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+            <a href="/tags/Games/" class="mdui-list-item mdui-ripple" style="display: flex">
+              Games
+              <div style="flex-grow: 1;"></div>
+              <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
+            </a>
+          
+        </div>
+      </div>
     
     <div class="mdui-collapse-item ">
       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
@@ -333,7 +373,7 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_23.png"/>
+            <img src="/img/random/picHD_5.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -360,6 +400,39 @@
           </div>
         
 
+        
+          <div class="posts-info">
+            
+            <div class="flex-spacer"></div>
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/categories/Diary/">
+                    <span>Diary</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/tags/PS3/">
+                    <span>PS3</span>
+                  </a>
+                
+                  <a href="/tags/Games/">
+                    <span>Games</span>
+                  </a>
+                
+              </div>
+            
+          </div>
         
         
           
@@ -553,7 +626,7 @@
   <!-- content warning -->
 <script type="text/ls-javascript" id="content-warning-script">
   (function() {
-    var postLastModifiedDate = 1504448018616
+    var postLastModifiedDate = 1504452710544
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {

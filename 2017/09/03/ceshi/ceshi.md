@@ -1,5 +1,10 @@
 ---
 title: 这是测试文件
+categories:
+- Diary
+tags:
+- PS3
+- Games
 ---
 
 ###这是标题
