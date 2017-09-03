@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>友情链接 - Hexo</title>
+  <title>这是测试文件 - Hexo</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -53,7 +53,7 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://yoursite.com">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="友情链接 - Hexo | Hexo">
+  <meta property="og:title" content="这是测试文件 - Hexo | Hexo">
   <meta property="og:image" content="/img/favicon.png" />
   
 
@@ -114,36 +114,30 @@
 
   
 
-    <div class="mdui-appbar animate-appbar mdui-shadow-0 mdui-appbar-fixed" id="blog-appbar">
-      <div class="mdui-toolbar mdui-color-theme mdui-shadow-2">
-        <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
-          <i class="mdui-icon">
-            <span></span>
-          </i>
-        </button>
-        
-          <a href="/" class="mdui-typo-headline">
-            首页
-          </a>
-          <span class="appbar-border-line mdui-hidden-xs"></span>
-        
-        
-          <span class="mdui-typo-title mdui-hidden-xs"
-            
-          >
-            友情链接
-          </span>
-        
-        
-        
-          <div class="flex-spacer"></div>
-        
-        
-        
+  <div class="mdui-appbar mdui-shadow-0 mdui-appbar-fixed animate-appbar" id="blog-appbar">
+    <div class="mdui-toolbar mdui-color-theme">
+      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon">
+          <span></span>
+        </i>
+      </button>
+      
+        <a href="/" class="mdui-typo-headline">
+          首页
+        </a>
+      
+      
+      
+        <div class="flex-spacer"></div>
+      
+      
+      
 
-      </div>
     </div>
-  
+  </div>
+
+
+  <div id="search-cover" searchResult onclick="closeSearch()"></div>
 
 
 
@@ -262,47 +256,196 @@
 
 <main>
   
-  <style id="friends_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("friends_css","/css/src/pages/friends.min.css?wIf3PLMp7vZIouKx2vUuDA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-<div id="friends-page" class="mdui-container-fluid animate-post">
-  <div>
+
+
+  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/now/post.min.css?FQz5X8PWcn8W571PmDi/2w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+<style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?k96yraexoRn3+CTmPycWNA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+<style>
+  .lg-outer .lg-item {
+    background-image: url("/img/loading.gif");
+  }
+</style>
+<div class="post-warpper animate-post">
+  <div class="post-bg-color
     
-      <div class="friends-title">
-        友链页面标语，可留空
-      </div>
-    
-  </div>
-  
-    <div class="mdui-row">
       
+        mdui-color-theme
+      
+    
+  "></div>
+  <div class="post-header
+    
+      
+        mdui-color-theme
+      
+    
+  ">
+    <div class="post-header-container">
+      <div class="post-title mdui-text-truncate">这是测试文件</div>
+      <div class="post-actions mdui-valign">
+        <div>
+          <span>Posted: </span>
+          <span style="float: right">Sep 03, 2017</span>
+          
+        </div>
         
-          <div class="mdui-col-xs-6 mdui-col-md-3">
-            <div class="mdui-card friends-container">
-              <a href="对方网站地址" target="_blank" class="content">
-                <img class="avatar" src="对方头像" alt="Example"/>
-                <div class="name mdui-text-color-theme-text">
-                  Example
-                </div>
-                <div class="descr mdui-text-color-theme-text mdui-text-truncate">
-                  对方的标语或描述
-                </div>
-                <div class="spacer"></div>
-                <div class="mdui-card-actions no-padding">
-                  <button class="mdui-btn mdui-ripple mdui-btn-block mdui-text-color-theme-accent">Visit</button>
-                </div>
-              </a>
-            </div>
+
+        
+  <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#menu-post-share'}">
+    <i class="mdui-icon material-icons">&#xe80d;</i>
+  </button>
+
+  <ul class="mdui-menu" id="menu-post-share">
+
+    
+
+    
+
+    
+
+    
+      <li class="mdui-menu-item">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Hexo&title=这是测试文件&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/09/03/ceshi/index.html" target="_blank" class="mdui-ripple">
+              Share to QQ
+          </a>
+      </li>
+    
+
+    
+
+    
+
+    
+      <li class="mdui-menu-item">
+          <a href="http://service.weibo.com/share.php?appkey=&title=这是测试文件&url=http://yoursite.com//2017/09/03/ceshi/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+              Share to Weibo
+          </a>
+      </li>
+    
+
+  </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <div class="post-container flex-spacer
+  
+  ">
+    <div class="post-adjust">
+      <div class="mdui-card card-bottom-fix menu-fix mdui-hoverable" id="blog-post">
+        <div class="warning">
+          This article was last modified
+          <span id="content-warning"></span>
+          days ago.
+          The content of this post may be outdated!
+        </div>
+        
+        
+          <div class="mdui-card-media">
+            <img src="/img/random/picHD_44.png"/>
           </div>
         
+        <div class="post-content mdui-typo no-margin" id="post-content">
+          <p>###这是标题<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure></p>
+<p><img src="http://image.baidu.com/search/detail?ct=503316480&amp;z=0&amp;ipn=d&amp;word=%E5%9B%BE%E7%89%87&amp;hs=0&amp;pn=8&amp;spn=0&amp;di=39263877970&amp;pi=0&amp;rn=1&amp;tn=baiduimagedetail&amp;is=0%2C0&amp;ie=utf-8&amp;oe=utf-8&amp;cl=2&amp;lm=-1&amp;cs=4271910516%2C424854353&amp;os=1766900067%2C1602912192&amp;simid=0%2C0&amp;adpicid=0&amp;lpn=0&amp;ln=30&amp;fr=ala&amp;fm=&amp;sme=&amp;cg=&amp;bdtype=13&amp;oriquery=&amp;objurl=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%3Dshijue1%2C0%2C0%2C294%2C40%2Fsign%3D3d2175db3cd3d539d530078052ee8325%2Fb7003af33a87e950c1e1a6491a385343fbf2b425.jpg&amp;fromurl=ipprf_z2C%24qAzdH3FAzdH3Fooo_z%26e3Bev2_z%26e3Bv54AzdH3Fv6jwptejAzdH3Fb8n80l9b0&amp;gsm=0" alt=""></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><p><a href="https://hexo.io/docs/server.html" target="_blank" rel="external">baidu</a></p>
+
+        </div>
+
+        
+          <div class="license mdui-typo">
+            <span>
+              Article License: 
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br />
+            <span>Article Permalink: <a href="http://yoursite.com/2017/09/03/ceshi/">http://yoursite.com/2017/09/03/ceshi/</a></span>
+            
+              <br />
+              <span>Article Markdown: <a href="http://yoursite.com/2017/09/03/ceshi/ceshi.md">http://yoursite.com/2017/09/03/ceshi/ceshi.md</a></span>
+            
+          </div>
+        
+
+        
+        
+          
+            <div class="posts-line">
+              <div class="mdui-divider"></div>
+            </div>
+            <div class="post-comment">
+              
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://yoursite.com/2017/09/03/ceshi/';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'http://yoursite.com/2017/09/03/ceshi/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+          
+        
+      </div>
+      
+        <div id="card-toc" class="
+        
+          mdui-color-theme
+        
+        ">
+          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.<span class="post-toc-text">Generate static files</span></span></a></a></ul>
+        </div>
       
     </div>
-    <button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
-  <i class="mdui-icon material-icons">&#xe5d8;</i>
-</button>
+  </div>
+  <div class="post-pagination mdui-color-theme">
+  
+    <div class="flex-spacer mdui-hidden-xs"></div>
+  
 
   
+    <div class="next mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/03/hello-world/" class="content no-text-decoration mdui-text-right">
+        <div>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">Older Post</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
+          Hello World
+        </div>
+      </a>
+    </div>
+    
 </div>
 
+  
+    <button id="button-toc" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" style="z-index: 9;" mdui-menu="{target: '#menu-toc', fixed: true}">
+  <i class="mdui-icon material-icons">&#xe242;</i>
+</button>
+<ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.</span> <span class="toc-text">Generate static files</span></a></li></ol>
+</ul>
 
+
+  
+
+</div>
 
 </main>
 
@@ -346,6 +489,130 @@
 </script>
 
 
+  <script type="text/ls-javascript" id="appbar-script">
+  /* post appbar */
+  (function() {
+    var pageFlag = false;
+    var appbar = new mdui.Headroom('#blog-appbar');
+    appbar.disable();
+    var toolbar = document.querySelector('#blog-appbar .mdui-toolbar')
+
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        toolbar.classList.add('mdui-shadow-2')
+        appbar.enable();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        toolbar.classList.remove('mdui-shadow-2')
+        appbar.disable();
+        pageFlag = false;
+      }
+    })
+  })();
+</script>
+
+  <script type="text/ls-javascript" id="toc-active-script">
+  if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
+    window.addEventListener("load", function() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
+        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
+      }
+
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('#card-toc');
+      var links = document.querySelectorAll("a.post-toc-link");
+      var toclist = document.querySelector("#card-toc > ul");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+    });
+  }
+</script>
+
+  <script type="text/ls-javascript" id="post-lg-script">
+  var images = document.querySelectorAll('#post-content img')
+  for (i = 0; i < images.length; i++) {
+    images[i].addEventListener("click", openLG);
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>John Doe</span> • Public<div descr>" + img_alt + "</div>"
+      }],
+    });
+  }
+</script>
+
+  <!-- content warning -->
+<script type="text/ls-javascript" id="content-warning-script">
+  (function() {
+    var postLastModifiedDate = 1504448018616
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('div.warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
+  })();
+</script>
+
+  
+
+  
+
+
 
 
 
@@ -364,6 +631,8 @@
   
 
 
+
+  <script>lsloader.load("lightgallery_js","/js/lightgallery.min.js?tQptxVaCRzQ3zx70gMUYig==", true)</script>
 
 
 
