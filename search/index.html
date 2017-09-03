@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>Index - Hexo</title>
+  <title>Search something... - Hexo</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -55,7 +55,7 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://yoursite.com">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="Index - Hexo | Hexo">
+  <meta property="og:title" content="Search something... - Hexo | Hexo">
   <meta property="og:image" content="/img/favicon.png" />
   
 
@@ -103,6 +103,8 @@
   <body class="mdui-theme-primary-indigo mdui-theme-accent-blue
    
   
+    mdui-appbar-with-toolbar
+  
   " >
 
 
@@ -114,16 +116,8 @@
 
   
 
-  <div class="mdui-appbar animate-appbar mdui-shadow-0" id="blog-appbar">
-    <div class="mdui-toolbar">
-      <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
-        <i class="mdui-icon">
-          <span></span>
-        </i>
-      </button>
-    </div>
-  </div>
 
+  <div id="search-cover" searchResult onclick="closeSearch()"></div>
 
 
 
@@ -155,12 +149,14 @@
   <div class="hexo">
     
       <div class="mdui-list no-padding-bottom">
-        <li class="mdui-list-item mdui-ripple mdui-list-item-active">
-          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-accent">&#xe88a;</i>
-          <div class="mdui-list-item-content mdui-text-color-theme-accent">
-            Index
-          </div>
-        </li>
+        <a href="/">
+          <li class="mdui-list-item mdui-ripple">
+            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+            <div class="mdui-list-item-content">
+              Index
+            </div>
+          </li>
+        </a>
       </div>
     
     
@@ -234,67 +230,23 @@
 
 
 <main>
-  
-  <div class="index-warper animate-post">
-  <div id="index">
-    <div class="faviconImg">
-      <img class="mdui-img-fluid" src="/img/favicon.png" />
-    </div>
-    
-  </div>
-  <div id="search-cover" searchResult></div>
+  <style id="search_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("search_css","/css/src/plus/search.min.css?PsMrsW7mtwLjgUsSFl0MAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+<style id="index_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("index_css","/css/src/plus/index.min.css?WYKJSRDQmvHqC3U1Wgs23g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+<div id="search">
+  <div class="posts-container column-3">
 
-  
+  </div>
 
-  <div id="posts">
-    
-    
-        
-  
-<div class="mdui-card card-bottom-fix mdui-hoverable">
-  <div class="mdui-card-header posts-header">
-    <img class="mdui-card-header-avatar" src="/img/avatar.png"/>
-    <div class="content mdui-valign">
-      <div class="mdui-typo-body-1-opacity mdui-typo">
-        <span>John Doe</span>
-        <span> · </span>
-        <span>Sep 03, 2017</span>
-      </div>
-    </div>
-  <div class="flex-spacer"></div>
-    <a href="/2017/09/03/hello-world/" target="_self" class="mdui-btn mdui-btn-icon mdui-ripple btn-dense"><i class="mdui-icon material-icons">&#xe89e;</i></a>
+  <div id="content-list" searchResult>
+
   </div>
-  <div class="mdui-card-content posts-content">
-    <div class="posts-excerpt">
-      <a href="/2017/09/03/hello-world/" target="_self" class="posts-title mdui-typo-title no-text-decoration">
-        
-        Hello World
-      </a>
-      <div class="posts-strip mdui-typo-body-1">
-        Welcome to Hexo
-      </div>
+
+  <div class="footer">
+    <div class="mdui-text-center mdui-text-color-theme-text">
+      It looks like you&#39;ve reached the end.
     </div>
-    <div class="flex-spacer"></div>
-    
-      <div class="posts-thumbnail" style="background-image: url(/img/random/picHD_34.png)"></div>
-    
   </div>
-  
 </div>
-
-
-
-    
-  </div>
-  
-
-  <button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
-  <i class="mdui-icon material-icons">&#xe5d8;</i>
-</button>
-
-</div>
-
-
 
 </main>
 
@@ -348,28 +300,6 @@
 
 
 
-
-
-  <script type="text/ls-javascript" id="to-top-script">
-  /* fab */
-  (function() {
-    var pageFlag = false;
-    var fab = new mdui.Fab('#toTop');
-    fab.hide();
-    window.addEventListener('scroll', function() {
-      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var divTop = document.querySelector('div#top').offsetTop
-      var pageLocation = divTop - bodyTop;
-      if (!pageFlag && pageLocation < 0) {
-        fab.show();
-        pageFlag = true;
-      } else if (pageFlag && pageLocation >= 0) {
-        fab.hide();
-        pageFlag = false;
-      }
-    });
-  })();
-</script>
 
 
 
