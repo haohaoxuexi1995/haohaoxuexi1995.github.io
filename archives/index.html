@@ -75,7 +75,7 @@
   
   
     
-      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?EXliK5rE3ppYXWmnAfU7UQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-plus.min.css?drCARdvvAyPTw8DuOYaQBg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
     
   
 
@@ -98,12 +98,12 @@
 
   
     
-  <body class="mdui-theme-primary-#cccccc mdui-theme-accent-blue
-   
+  <body class="mdui-appbar-with-toolbar mdui-theme-primary-#cccccc mdui-theme-accent-blue
   
-    mdui-appbar-with-toolbar
   
-  " >
+    mdui-drawer-body-left
+  
+   drawer-overlay-none" >
 
 
   
@@ -114,86 +114,88 @@
 
   
 
-      <div class="mdui-appbar mdui-appbar-fixed animate-appbar mdui-shadow-0" id="blog-appbar">
-        <div class="mdui-toolbar mdui-color-theme mdui-shadow-2">
-          <button class="mdui-btn mdui-ripple mdui-btn-icon drawer-button" mdui-drawer="{target: '#drawer'}">
-            <i class="mdui-icon">
-              <span></span>
-            </i>
-          </button>
-          
-            <a href="/" class="mdui-typo-headline mdui-hidden-sm-down">
-              首页
-            </a>
-            <span class="appbar-border-line mdui-hidden-sm-down"></span>
-          
-          <span class="mdui-typo-title">何磊</span>
-          <div class="mdui-toolbar-spacer"></div>
-          
-          
+  <div class="mdui-appbar mdui-appbar-fixed animate-appbar" id="blog-appbar">
+    <div class="mdui-toolbar mdui-color-theme">
+      <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-hidden-md-up" mdui-drawer="{target: '#drawer'}">
+        <i class="mdui-icon material-icons">&#xe5d2;</i>
+      </button>
+      <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-hidden-sm-down" back>
+        <i class="mdui-icon material-icons">&#xe5c4;</i>
+      </button>
+      
+        <a href="/" class="mdui-typo-headline mdui-hidden-sm-down">
+          首页
+        </a>
+        <span class="appbar-border-line mdui-hidden-sm-down"></span>
+      
+      <span class="mdui-typo-title">何磊</span>
+      
+      <div class="mdui-toolbar-spacer"></div>
+      
+      
 
-        </div>
+      <div class="appbar-userview mdui-valign mdui-hidden-sm-down" mdui-menu="{target: '#menu-userview', covered: false}">
+        <img class="mdui-img-circle appbar-userview-avatar mdui-center" src="/img/avatar.png"/>
       </div>
-
-
-
-
-
-
-
-  
-  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
-  " id="drawer" style="z-index: 2001;">
-  <div class="userview" style="background-image: url(/img/bg.png)">
-  <div class="overlay">
-    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
-    <div class="bottom">
-      <div class="info">
-        <div class="author mdui-text-color-white-text">
-          何磊
-        </div>
-        <div class="slogan mdui-text-color-white-secondary">
-          欢迎来到我的个人博客! 我是 HL
-        </div>
-      </div>
+      <div class="mdui-menu no-padding mdui-hidden-xs" id="menu-userview">
+  <div class="menu-userview-container">
+    <img class="mdui-img-circle menu-userview-avatar" src="/img/avatar.png"/>
+    <div class="menu-userview-content">
+      <div class="mdui-typo-body-1">何磊</div>
+      <div class="mdui-typo-caption">欢迎来到我的个人博客! 我是 HL</div>
       <div class="flex-spacer"></div>
       
     </div>
   </div>
 </div>
 
-  <div class="content">
-  <div class="hexo">
-    
-      <div class="mdui-list no-padding-bottom">
-        <a href="/">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-            <div class="mdui-list-item-content">
-              首页
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding-top">
-        <li class="mdui-list-item mdui-ripple mdui-list-item-active">
-          <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-accent">&#xe149;</i>
-          <div class="mdui-list-item-content mdui-text-color-theme-accent">
-            归档
-            <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-          </div>
-        </li>
-      </div>
-    
-    
+    </div>
   </div>
+
+
+
+
+
+
   
+  <div class="mdui-drawer drawer-container
+  " id="drawer" style="z-index: 2001;">
+  <div class="drawer-head mdui-valign mdui-hidden-md-up">
+  <div class="mdui-typo-title-opacity">首页</div>
+  <div class="flex-spacer"></div>
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
 </div>
 
-  <div class="flex-spacer"></div>
-  <div class="drawer-footer">
+  <div class="mdui-divider"></div>
+  <div class="drawer-content">
+    
+  <div class="mdui-list no-padding-bottom">
+    <a href="/">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+        <div class="mdui-list-item-content">
+          首页
+        </div>
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding-top">
+    <li class="mdui-list-item mdui-ripple mdui-list-item-active">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-theme-accent">&#xe149;</i>
+      <div class="mdui-list-item-content mdui-text-color-theme-accent">
+        归档
+        <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
+      </div>
+    </li>
+  </div>
+
+
+
+
+    <div style="flex-grow: 1;"></div>
+    <div class="drawer-footer">
   <div class="mdui-typo mdui-typo-caption-opacity">
     Powered by <a href="http://hexo.io">Hexo</a>
     <br />
@@ -221,6 +223,7 @@
   
 </script>
 
+  </div>
 </div>
 
 
@@ -283,8 +286,8 @@
         
         <div class="mdui-col-xs-6 mdui-col-md-3 item">
           <a href="/archives/2017/" target="_self" class="no-text-decoration">
-            <div class="mdui-card card-bottom-fix mdui-color-blue-grey">
-              <div class="mdui-card-media" style="background-image: url(/img/random/picHD_6.png)">
+            <div class="mdui-card card-bottom-fix mdui-color-purple">
+              <div class="mdui-card-media" style="background-image: url(/img/random/picHD_10.png)">
               </div>
               <div class="content no-length">
                 <img class="mdui-img-circle avatar" src="/img/avatar.png" />
@@ -328,21 +331,15 @@
 
 
   
-    <script type="text/ls-javascript" id="global-script">
-  /* appbar button */
+    <script type="text/ls-javascript" id="back-button-script">
+  /* back button */
   (function() {
-    var drawer = document.querySelector('#drawer')
-    var drawerBtn = document.querySelector('.drawer-button')
-
-    drawer.addEventListener('open.mdui.drawer', function (e) {
-      drawerBtn.classList.add('back')
-    })
-    drawer.addEventListener('close.mdui.drawer', function (e) {
-      drawerBtn.classList.remove('back')
+    var backBtn = document.querySelector('button[back]')
+    if (backBtn !== null)
+    backBtn.addEventListener('click', function() {
+        window.history.back();
     })
   })();
-
-  
 </script>
 
 
@@ -354,9 +351,11 @@
         .style.transform = 'translateY(' + document.body.scrollTop * 0.4 + 'px)';
     })
   </script>
+  
 
 
 
+  
 
 
 

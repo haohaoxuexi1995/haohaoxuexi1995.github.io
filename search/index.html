@@ -75,7 +75,7 @@
   
   
     
-      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-now.min.css?EXliK5rE3ppYXWmnAfU7UQ==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+      <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style-plus.min.css?drCARdvvAyPTw8DuOYaQBg==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
     
   
 
@@ -98,12 +98,12 @@
 
   
     
-  <body class="mdui-theme-primary-#cccccc mdui-theme-accent-blue
-   
+  <body class="mdui-appbar-with-toolbar mdui-theme-primary-#cccccc mdui-theme-accent-blue
   
-    mdui-appbar-with-toolbar
   
-  " >
+    mdui-drawer-body-left
+  
+   drawer-overlay-none" >
 
 
   
@@ -115,88 +115,71 @@
   
 
 
-  <div id="search-cover" searchResult onclick="closeSearch()"></div>
-
-
 
 
 
 
   
-  <div class="mdui-drawer mdui-drawer-full-height mdui-drawer-close
+  <div class="mdui-drawer drawer-container
   " id="drawer" style="z-index: 2001;">
-  <div class="userview" style="background-image: url(/img/bg.png)">
-  <div class="overlay">
-    <img class="mdui-img-circle avatar" src="/img/avatar.png"/>
-    <div class="bottom">
-      <div class="info">
-        <div class="author mdui-text-color-white-text">
-          何磊
+  <div class="drawer-head mdui-valign mdui-hidden-md-up">
+  <div class="mdui-typo-title-opacity">首页</div>
+  <div class="flex-spacer"></div>
+  <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
+</div>
+
+  <div class="mdui-divider"></div>
+  <div class="drawer-content">
+    
+  <div class="mdui-list no-padding-bottom">
+    <a href="/">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
+        <div class="mdui-list-item-content">
+          首页
         </div>
-        <div class="slogan mdui-text-color-white-secondary">
-          欢迎来到我的个人博客! 我是 HL
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding">
+    <a href="/archives">
+      <li class="mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
+        <div class="mdui-list-item-content">
+          归档
+          <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
         </div>
+      </li>
+    </a>
+  </div>
+
+
+  <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
+    
+    
+    <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
+        <div class="mdui-list-item-content">年份</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
       </div>
-      <div class="flex-spacer"></div>
-      
+      <div class="mdui-collapse-item-body mdui-list">
+        
+        
+          <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
+            2017
+          </a>
+        
+      </div>
     </div>
   </div>
-</div>
 
-  <div class="content">
-  <div class="hexo">
-    
-      <div class="mdui-list no-padding-bottom">
-        <a href="/">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe88a;</i>
-            <div class="mdui-list-item-content">
-              首页
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding">
-        <a href="/archives">
-          <li class="mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe149;</i>
-            <div class="mdui-list-item-content">
-              归档
-              <span class="badge new mdui-color-theme-accent" data-badge-caption="">2</span>
-            </div>
-          </li>
-        </a>
-      </div>
-    
-    
-      <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
-        
-        
-        <div class="mdui-collapse-item ">
-          <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
-            <i class="mdui-list-item-icon mdui-icon material-icons">&#xe916;</i>
-            <div class="mdui-list-item-content">年份</div>
-            <i class="mdui-collapse-item-arrow mdui-icon material-icons">&#xe5c5;</i>
-          </div>
-          <div class="mdui-collapse-item-body mdui-list">
-            
-            
-              <a href="/archives/2017/" class="mdui-list-item mdui-ripple">
-                2017
-              </a>
-            
-          </div>
-        </div>
-      </div>
-    
-  </div>
-  
-</div>
 
-  <div class="flex-spacer"></div>
-  <div class="drawer-footer">
+
+    <div style="flex-grow: 1;"></div>
+    <div class="drawer-footer">
   <div class="mdui-typo mdui-typo-caption-opacity">
     Powered by <a href="http://hexo.io">Hexo</a>
     <br />
@@ -224,6 +207,7 @@
   
 </script>
 
+  </div>
 </div>
 
 
@@ -275,27 +259,67 @@
 
 
   
-    <script type="text/ls-javascript" id="global-script">
-  /* appbar button */
+    <script type="text/ls-javascript" id="back-button-script">
+  /* back button */
   (function() {
-    var drawer = document.querySelector('#drawer')
-    var drawerBtn = document.querySelector('.drawer-button')
-
-    drawer.addEventListener('open.mdui.drawer', function (e) {
-      drawerBtn.classList.add('back')
-    })
-    drawer.addEventListener('close.mdui.drawer', function (e) {
-      drawerBtn.classList.remove('back')
+    var backBtn = document.querySelector('button[back]')
+    if (backBtn !== null)
+    backBtn.addEventListener('click', function() {
+        window.history.back();
     })
   })();
-
-  
 </script>
 
 
 
 
 
+
+  
+  <script type="text/javascript">
+    (function() {
+      var items = document.querySelectorAll("div#content-list .content-item");
+      var list = document.querySelector("div.posts-container");
+      var columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
+      var level = 4;
+      var sm = 1;
+      var column1Width = 1024;
+      var column2Width = 1400;
+      list.innerHTML = "";
+      function cleanUpdate() {
+        items = document.querySelectorAll("div#content-list .content-item");
+        list.innerHTML = '';
+        columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
+        level = 4;
+        updateList();
+      }
+      window.postListCleanUpdate = cleanUpdate;
+      function getColumnNums() {
+        if (document.body.clientWidth <= column1Width) {
+          return 1
+        }
+        if (document.body.clientWidth <= column2Width) {
+          return 2
+        }
+        return 3
+      }
+      function updateList() {
+        var ColumnNums = getColumnNums();
+        if (level == ColumnNums) return;
+        level = ColumnNums;
+        list.setAttribute("class", "column-" + ColumnNums + " posts-container animate-post")
+        Array.prototype.forEach.call(items, function(value, index) {
+          var to = index % ColumnNums;
+          columns[to].appendChild(value);
+        })
+        columns.forEach(function(value) {
+          list.appendChild(value)
+        })
+      }
+      window.addEventListener("resize", updateList);
+      updateList();
+    })()
+  </script>
 
 
 
