@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>标签: PS3 - Hexo</title>
+  <title>java_线性表 - Hexo</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -40,7 +40,7 @@
 
   <meta name="author" content="何磊">
   
-  <meta name="keywords" content="blog, hexo, mdui">
+  <meta name="keywords" content="blog, hexo, mdui,后端">
 
   <!--iOS -->
   <meta name="apple-mobile-web-app-title" content="Hexo">
@@ -55,11 +55,11 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://yoursite.com">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="标签: PS3 - Hexo | Hexo">
+  <meta property="og:title" content="java_线性表 - Hexo | Hexo">
   <meta property="og:image" content="/img/photo.jpg" />
   
 
-    
+    <meta property="og:article:tag" content="后端"> 
 
   <!-- Cache -->
   <meta http-equiv="Cache-Control" content="max-age=7200" />
@@ -105,9 +105,7 @@
   
     mdui-drawer-body-left
   
-  
-    side-content style-fix
-   drawer-overlay-none" onresize="styleChanging()">
+   drawer-overlay-none" >
 
 
   
@@ -127,21 +125,9 @@
         <a href="/" class="mdui-typo-headline">
           INDEX
         </a>
-        <span class="appbar-border-line mdui-hidden-xs"></span>
       
-      <span class="mdui-typo-title
-      "
       
-        onclick="smoothScroll.animateScroll( 0 );"
-      >
-        PS3
-      </span>
-      
-      <div class="mdui-toolbar-spacer"
-        
-          onclick="smoothScroll.animateScroll( 0 );"
-        
-      ></div>
+      <div class="mdui-toolbar-spacer"></div>
       
       
 
@@ -160,9 +146,6 @@
   </div>
 </div>
 
-      
-        <button class="mdui-btn mdui-ripple mdui-btn-icon style-fix"><i class="mdui-icon material-icons">&#xe80d;</i></button>
-      
     </div>
   </div>
 
@@ -173,10 +156,8 @@
 
   
   <div class="mdui-drawer drawer-container
-  
-    mdui-drawer-full-height mdui-drawer-close drawer-fix
   " id="drawer" style="z-index: 2001;">
-  <div class="drawer-head mdui-valign ">
+  <div class="drawer-head mdui-valign mdui-hidden-md-up">
   <div class="mdui-typo-title-opacity">INDEX</div>
   <div class="flex-spacer"></div>
   <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
@@ -236,7 +217,7 @@
       </div>
     
     
-      <div class="mdui-collapse-item mdui-collapse-item-open">
+      <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon fa fa-tags mdui-text-center"></i>
           <div class="mdui-list-item-content">标签</div>
@@ -321,24 +302,44 @@
 
 
 
+
+<main>
   
 
-  <style id="side_content_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("side_content_css","/css/src/plus/side_content.min.css?I3AiJmqczd8wYmijb8bxag==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
-<div id="side-content" class="mdui-color-deep-orange animate-drawer">
-  <div class="mdui-grid-tile" style="overflow: visible;">
-    <div class="bg">
-      <img src="/img/random/picHD_21.png" />
-    </div>
-    <div class="mdui-grid-tile-actions mdui-grid-tile-actions-top mdui-grid-tile-actions-gradient">
-      <div class="flex-spacer"></div>
-      <div class="mdui-grid-tile-buttons">
-        
-  <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-float-right" mdui-menu="{target: '#menu-page-share'}"><i class="mdui-icon material-icons">&#xe80d;</i></button>
+  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/plus/post.min.css?lbQgTsUgcyos26e49AY7PA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
-  <ul class="mdui-menu" id="menu-page-share">
+<style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?k96yraexoRn3+CTmPycWNA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
+
+<style>
+  .lg-outer .lg-item {
+    background-image: url("/img/loading.gif");
+  }
+</style>
+<div class="post-warpper animate-post">
+  <div class="post-bg-color
     
+  "></div>
+  <div class="post-header
+    
+  ">
+    <div class="post-header-container">
+      <div class="post-title mdui-text-truncate">java_线性表</div>
+      <div class="post-actions mdui-valign">
+        <div>
+          <span>编写时间：</span>
+          <span style="float: right">9月 04, 2017</span>
+          
+        </div>
+        
+
+        
+  <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#menu-post-share'}">
+    <i class="mdui-icon material-icons">&#xe80d;</i>
+  </button>
+
+  <ul class="mdui-menu" id="menu-post-share">
 
     
 
@@ -348,7 +349,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=PS3&title=PS3&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com//tags/PS3/index.html" target="_blank" class="mdui-ripple">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Hexo&title=java_线性表&summary=&pics=http://yoursite.com/img/favicon.png&url=http://yoursite.com/2017/09/04/线性表/index.html" target="_blank" class="mdui-ripple">
               分享到QQ
           </a>
       </li>
@@ -360,7 +361,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share.php?appkey=&title=PS3&url=http://yoursite.com//tags/PS3/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+          <a href="http://service.weibo.com/share.php?appkey=&title=java_线性表&url=http://yoursite.com//2017/09/04/线性表/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
               分享到微博
           </a>
       </li>
@@ -372,109 +373,135 @@
       </div>
     </div>
   </div>
-  <div class="content">
-    <img class="mdui-img-circle avatar" src="/img/photo.jpg"/>
-    <div class="author mdui-text-center">
-      何磊
-    </div>
-    <div class="name">
-      PS3
-    </div>
-    <div class="length">
+  <div class="post-container flex-spacer
+  
+    no-toc
+  
+  ">
+    <div class="post-adjust">
+      <div class="mdui-card card-bottom-fix menu-fix " id="blog-post">
+        <div class="warning">
+          这篇文章最后修改于
+          <span id="content-warning"></span>
+          天之前。
+          本页内容可能已经过时！
+        </div>
+        
+        
+          <div class="mdui-card-media">
+            <img src="/img/random/picHD_5.png"/>
+          </div>
+        
+        <div class="post-content mdui-typo no-margin" id="post-content">
+          <p>###线性表的定义<br><strong>线性表是最基本、最简单、也是最常用的一种数据结构。</strong> 一个线性表是n个相同特性的数据元素的集合,线性表中的个数n定义为线性表的长度，n=0时称为<strong>空表</strong>.在非空表中每个数据元素都有一个确定的位置，如用ai表示数据元素，则i称为数据元素ai在线性表中的位序。线性表的相邻元素之间存在着序偶关系。如用（a1，…，ai-1，ai，ai+1，…，an）表示一个顺序表，则表中ai-1领先于ai，ai领先于ai+1，称ai-1是ai的直接前驱元素，ai+1是ai的直接后继元素。当i=1,2，…，n-1时，ai有且仅有一个直接后继，当i=2，3，…，n时，ai有且仅有一个直接前驱</p>
+<p>##线性表特征<br>    1．集合中必存在唯一的一个“第一元素”。<br>    2．集合中必存在唯一的一个 “最后元素” 。<br>    3．除最后一个元素之外，均有 唯一的后继(后件)。<br>    4．除第一个元素之外，均有 唯一的前驱(前件)。</p>
+<p>此图就是一个线性表<img src="http://images.cnitblog.com/blog/358550/201309/11011121-def3b944aa6a4f758dd3fa2639de2203.png" alt=""></p>
+<p>##线性表的操作</p>
+
+        </div>
+
+        
+          <div class="license mdui-typo">
+            <span>
+              本文许可协议：
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br />
+            <span>本文永久链接：<a href="http://yoursite.com/2017/09/04/线性表/">http://yoursite.com/2017/09/04/线性表/</a></span>
+            
+              <br />
+              <span>本文Markdown：<a href="http://yoursite.com/2017/09/04/线性表/线性表.md">http://yoursite.com/2017/09/04/线性表/线性表.md</a></span>
+            
+          </div>
+        
+
+        
+          <div class="posts-info">
+            
+            <div class="flex-spacer"></div>
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/categories/java_数据结构/">
+                    <span>java_数据结构</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/tags/后端/">
+                    <span>后端</span>
+                  </a>
+                
+              </div>
+            
+          </div>
+        
+        
+          
+            <div class="posts-line">
+              <div class="mdui-divider"></div>
+            </div>
+            <div class="post-comment">
+              
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://yoursite.com/2017/09/04/线性表/';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'http://yoursite.com/2017/09/04/线性表/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>请启用JavaScript以查看<a href="https://disqus.com/?ref_noscript">来自Disqus的评论</a></noscript>
+
+
+            </div>
+          
+        
+      </div>
       
-      1篇文章
     </div>
   </div>
-</div>
-<div id="contentLocation"></div>
-
-
-
-<main>
-  <div class="posts-container column-3">
-
-</div>
-<div id="content-list" class="animate-post">
+  <div class="post-pagination mdui-color-theme">
   
-    <div class="content-item">
-      
+    <div class="flex-spacer mdui-hidden-xs"></div>
   
-<style id="index_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("index_css","/css/src/plus/index.min.css?WYKJSRDQmvHqC3U1Wgs23g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-<div class="mdui-card card-bottom-fix  mdui-center">
-  <div class="posts-title mdui-typo">
-    <a href="/2017/09/03/ceshi/" target="_self">
-      
-      这是测试文件
-    </a>
-  </div>
-  <div class="posts-line">
-    <div class="mdui-divider"></div>
-  </div>
-  <div class="posts-content">
-    ###这是标题
-  </div>
+
   
-    <div class="mdui-card-media">
-      <img src="/img/random/picHD_32.png"/>
+    <div class="next mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/03/ceshi/" class="content no-text-decoration mdui-text-right">
+        <div>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
+          这是测试文件
+        </div>
+      </a>
     </div>
-  
-  <div class="posts-bottom">
     
-      <div class="mdui-chip">
-        <span class="mdui-chip-icon"><i class="mdui-icon
-        
-          mdui-text-color-black-icon
-        
-         material-icons mdui-text-center">&#xe149;</i></span>
-      </div>
-      <div class="content mdui-typo">
-        
-          <a href="/categories/Diary/">
-            <span>Diary</span>
-          </a>
-        
-      </div>
-    
-    
-      <div class="mdui-chip">
-        <span class="mdui-chip-icon"><i class="mdui-icon
-        
-          mdui-text-color-black-icon
-        
-         fa fa-tags mdui-text-center"></i></span>
-      </div>
-      <div class="content mdui-typo">
-        
-          <a href="/tags/PS3/">
-            <span>PS3</span>
-          </a>
-        
-          <a href="/tags/Games/">
-            <span>Games</span>
-          </a>
-        
-      </div>
-    
-    <div class="flex-spacer"></div>
-    <div class="mdui-typo-caption-opacity mdui-valign">
-      <span>9月 03, 2017</span>
-    </div>
-  </div>
 </div>
 
-
-
-    </div>
   
+
 </div>
-
-
-
-
-<button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
-  <i class="mdui-icon material-icons">&#xe5d8;</i>
-</button>
-
 
 </main>
 
@@ -512,120 +539,113 @@
 </script>
 
 
-
-
-
-
-  
-  <script type="text/javascript">
-    (function() {
-      var items = document.querySelectorAll("div#content-list .content-item");
-      var list = document.querySelector("div.posts-container");
-      var columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
-      var level = 4;
-      var sm = 1;
-      var column1Width = 1024;
-      var column2Width = 1400;
-      list.innerHTML = "";
-      function cleanUpdate() {
-        items = document.querySelectorAll("div#content-list .content-item");
-        list.innerHTML = '';
-        columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
-        level = 4;
-        updateList();
-      }
-      window.postListCleanUpdate = cleanUpdate;
-      function getColumnNums() {
-        if (document.body.clientWidth <= column1Width) {
-          return 1
-        }
-        if (document.body.clientWidth <= column2Width) {
-          return 2
-        }
-        return 3
-      }
-      function updateList() {
-        var ColumnNums = getColumnNums();
-        if (level == ColumnNums) return;
-        level = ColumnNums;
-        list.setAttribute("class", "column-" + ColumnNums + " posts-container animate-post")
-        Array.prototype.forEach.call(items, function(value, index) {
-          var to = index % ColumnNums;
-          columns[to].appendChild(value);
+  <script type="text/ls-javascript" id="toc-active-script">
+  if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
+    window.addEventListener("load", function() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
         })
-        columns.forEach(function(value) {
-          list.appendChild(value)
-        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
       }
-      window.addEventListener("resize", updateList);
-      updateList();
-    })()
-  </script>
 
-
-
-
-
-  <script type="text/ls-javascript" id="style-changing-script">
-  var content_flag = false;
-  var appbar = document.querySelector('div#blog-appbar')
-  var body = document.querySelector('body')
-
-  window.addEventListener('scroll', function() {
-    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    var divTop = document.querySelector('div#contentLocation').offsetTop
-    var contentLocation = divTop - scrollTop - 56;
-
-    if (!content_flag && contentLocation < 0 && window.innerWidth < 860) {
-      appbar.classList.add('style-fix');
-      body.classList.remove('style-fix');
-      content_flag = true;
-    } else if (content_flag && contentLocation >= 0 && window.innerWidth < 860) {
-      appbar.classList.remove('style-fix');
-      body.classList.add('style-fix');
-      content_flag = false;
-    };
-  })
-
-  function styleChanging() {
-    var hide = new mdui.Headroom('div#blog-appbar');
-    var windowWidth = window.innerWidth,
-      toLeftWidth = 860;
-    if (windowWidth < toLeftWidth) {
-      hide.enable();
-    } else {
-      hide.disable();
-    }
-  };
-  styleChanging();
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('#card-toc');
+      var links = document.querySelectorAll("a.post-toc-link");
+      var toclist = document.querySelector("#card-toc > ul");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+    });
+  }
 </script>
 
-
-
-
-
-
-  <script type="text/ls-javascript" id="to-top-script">
-  /* fab */
-  (function() {
-    var pageFlag = false;
-    var fab = new mdui.Fab('#toTop');
-    fab.hide();
-    window.addEventListener('scroll', function() {
-      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var divTop = document.querySelector('div#top').offsetTop
-      var pageLocation = divTop - bodyTop;
-      if (!pageFlag && pageLocation < 0) {
-        fab.show();
-        pageFlag = true;
-      } else if (pageFlag && pageLocation >= 0) {
-        fab.hide();
-        pageFlag = false;
-      }
+  <script type="text/ls-javascript" id="post-lg-script">
+  var images = document.querySelectorAll('#post-content img')
+  for (i = 0; i < images.length; i++) {
+    images[i].addEventListener("click", openLG);
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>何磊</span> • 公开<div descr>" + img_alt + "</div>"
+      }],
     });
+  }
+</script>
+
+  <!-- content warning -->
+<script type="text/ls-javascript" id="content-warning-script">
+  (function() {
+    var postLastModifiedDate = 1504492390545
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('div.warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
   })();
 </script>
 
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -633,6 +653,8 @@
   
 
 
+
+  <script>lsloader.load("lightgallery_js","/js/lightgallery.min.js?tQptxVaCRzQ3zx70gMUYig==", true)</script>
 
 
 
