@@ -14,7 +14,7 @@ tags:
 ###  举个不恰当的小例子
 
 	如果现在有一个women,她有智商和颜值,并且我们可以获得她的智商和颜值.那么她的实现类应该为:
-	
+
 ``` bash
 	package decorator;
 
@@ -40,7 +40,6 @@ tags:
 ```	
 
 此时的我们可以测试一下这个类:
-
 
 ``` bash
 	package decorator;
