@@ -1,7 +1,7 @@
 ---
 title: java_线性表
 categories:
-- Diary
+- 数据结构java
 tags:
 - 后端
 ---
