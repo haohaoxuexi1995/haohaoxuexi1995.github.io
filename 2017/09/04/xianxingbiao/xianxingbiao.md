@@ -173,6 +173,22 @@ tags:
 				return 1;
 			}
 			
+			/**
+			 * 将指定索引的值替换成我们想要的值
+			 * @param index
+			 * @param value
+			 */
+			public void replace(int index,int value){
+				if(index>= size || index<0){
+					throw new IndexOutOfBoundsException();
+				}
+				arr[index]=value;
+			}
+			
+			/**
+			 * 返回线性表是否为空
+			 * @return
+			 */
 			public boolean isEmpty() {
 				return size==0;
 			}
