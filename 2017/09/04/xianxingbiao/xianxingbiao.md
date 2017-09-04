@@ -1,7 +1,7 @@
 ---
 title: java_线性表
 categories:
-- java_数据结构
+- java_dataStructure
 tags:
 - 后端
 ---
@@ -194,5 +194,5 @@ tags:
 			}
 		}
 ```
-
+可以看到,线性表在查找和删除方面都是常数倍执行,
 
