@@ -16,143 +16,143 @@ tags:
 	如果现在有一个women,她有智商和颜值,并且我们可以获得她的智商和颜值.那么她的实现类应该为:
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class Women {
+public class Women {
 
-		private int beauty; // 一个女人的颜值
-		private int iq; // 一个女人的IQ
+	private int beauty; // 一个女人的颜值
+	private int iq; // 一个女人的IQ
 
-		public Women(int beauty, int iq) {
-			this.beauty = beauty;
-			this.iq = iq;
-		}
-
-		public int getBeauty() {
-			return beauty;
-		}
-
-		public int getIq() {
-			return iq;
-		}
-
+	public Women(int beauty, int iq) {
+		this.beauty = beauty;
+		this.iq = iq;
 	}
+
+	public int getBeauty() {
+		return beauty;
+	}
+
+	public int getIq() {
+		return iq;
+	}
+
+}
 ```	
 
 此时的我们可以测试一下这个类:
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class Test {
+public class Test {
 
-		public static void main(String[] args) {
-			Women fengjie=new Women(50, 70);
-			System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
-		}
+	public static void main(String[] args) {
+		Women fengjie=new Women(50, 70);
+		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
 	}
+}
 ```
 
 不出所料,打印的结果为50 70.但是如果我们让这个women去读书呢?读书不是可以增加IQ呢.于是我们创建一个StudyWomen类
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class StudyWomen extends Women{
+public class StudyWomen extends Women{
 
-		/**
-		 * StudyWomen的构造方法
-		 * @param beauty
-		 * @param iq
-		 */
-		public StudyWomen(int beauty, int iq) {
-			super(beauty, iq);
-		}
-
-		/**
-		 *由于是学习过后的women,所以颜值不变
-		 * 
-		 */
-		public int getBeauty() {
-			return super.getBeauty();
-		}
-
-		/**
-		 *在父类的基础上将IQ增加20
-		 * 
-		 */
-		public int getIq() {
-			return super.getIq()+20;
-		}
-
+	/**
+	 * StudyWomen的构造方法
+	 * @param beauty
+	 * @param iq
+	 */
+	public StudyWomen(int beauty, int iq) {
+		super(beauty, iq);
 	}
+
+	/**
+	 *由于是学习过后的women,所以颜值不变
+	 * 
+	 */
+	public int getBeauty() {
+		return super.getBeauty();
+	}
+
+	/**
+	 *在父类的基础上将IQ增加20
+	 * 
+	 */
+	public int getIq() {
+		return super.getIq()+20;
+	}
+
+}
 ```
 
 此时的我们可以测试一下这个类:
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class Test {
+public class Test {
 
-		public static void main(String[] args) {
-			StudyWomen fengjie=new StudyWomen(50, 70);
-			System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
-		}
+	public static void main(String[] args) {
+		StudyWomen fengjie=new StudyWomen(50, 70);
+		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
 	}
+}
 ```
 
 哈哈更不出所料,打印的结果为50 90.但是这个women不喜欢读书,喜欢打扮呢?那IQ就不会增加了,相反增加的是颜值,于是我们创建一个DressWomen类
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class DressWomen extends Women{
+public class DressWomen extends Women{
 
-		public DressWomen(int beauty, int iq) {
-			super(beauty, iq);
-		}
-		
-		public int getBeauty() {
-			return super.getBeauty()+20;
-		}
-
-		public int getIq() {
-			return super.getIq();
-		}
+	public DressWomen(int beauty, int iq) {
+		super(beauty, iq);
 	}
+	
+	public int getBeauty() {
+		return super.getBeauty()+20;
+	}
+
+	public int getIq() {
+		return super.getIq();
+	}
+}
 
 ```
 
 此时的我们可以测试一下这个类:
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class Test {
+public class Test {
 
-		public static void main(String[] args) {
-			DressWomen fengjie=new DressWomen(50, 70);
-			System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
-		}
+	public static void main(String[] args) {
+		DressWomen fengjie=new DressWomen(50, 70);
+		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
 	}
+}
 ```
 
 哈哈更更不出所料,打印的结果为70 70.但是,你想过没有,如果这个women又喜欢读书,而且喜欢打扮呢?那么,我们现在就需要继承StudyWomen或者DressWomen中的其中一个,重写另一个方法,那我继承DressWomen
 
 ``` bash
-	package decorator;
+package decorator;
 
-	public class StudyDressWomen extends DressWomen{
+public class StudyDressWomen extends DressWomen{
 
-		public StudyDressWomen(int beauty, int iq) {
-			super(beauty, iq);
-		}
-
-		public int getIq() {
-			return super.getIq()+20;
-		}
+	public StudyDressWomen(int beauty, int iq) {
+		super(beauty, iq);
 	}
+
+	public int getIq() {
+		return super.getIq()+20;
+	}
+}
 
 ```
 
