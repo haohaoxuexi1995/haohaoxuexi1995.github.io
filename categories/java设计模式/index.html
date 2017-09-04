@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>Hello World - Blog</title>
+  <title>分类: java设计模式 - Blog</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -55,7 +55,7 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://haohaoxuexi1995.github.io">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="Hello World - Blog | Blog">
+  <meta property="og:title" content="分类: java设计模式 - Blog | Blog">
   <meta property="og:image" content="/img/photo.jpg" />
   
 
@@ -105,7 +105,9 @@
   
     mdui-drawer-body-left
   
-   drawer-overlay-none" >
+  
+    side-content style-fix
+   drawer-overlay-none" onresize="styleChanging()">
 
 
   
@@ -125,9 +127,21 @@
         <a href="/" class="mdui-typo-headline">
           INDEX
         </a>
+        <span class="appbar-border-line mdui-hidden-xs"></span>
       
+      <span class="mdui-typo-title
+      "
       
-      <div class="mdui-toolbar-spacer"></div>
+        onclick="smoothScroll.animateScroll( 0 );"
+      >
+        java设计模式
+      </span>
+      
+      <div class="mdui-toolbar-spacer"
+        
+          onclick="smoothScroll.animateScroll( 0 );"
+        
+      ></div>
       
       
 
@@ -146,6 +160,9 @@
   </div>
 </div>
 
+      
+        <button class="mdui-btn mdui-ripple mdui-btn-icon style-fix"><i class="mdui-icon material-icons">&#xe80d;</i></button>
+      
     </div>
   </div>
 
@@ -156,8 +173,10 @@
 
   
   <div class="mdui-drawer drawer-container
+  
+    mdui-drawer-full-height mdui-drawer-close drawer-fix
   " id="drawer" style="z-index: 2001;">
-  <div class="drawer-head mdui-valign mdui-hidden-md-up">
+  <div class="drawer-head mdui-valign ">
   <div class="mdui-typo-title-opacity">INDEX</div>
   <div class="flex-spacer"></div>
   <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
@@ -193,7 +212,7 @@
 
   <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
     
-      <div class="mdui-collapse-item ">
+      <div class="mdui-collapse-item mdui-collapse-item-open">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
           <div class="mdui-list-item-content">分类</div>
@@ -290,48 +309,24 @@
 
 
 
-
-<main>
   
 
+  <style id="side_content_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("side_content_css","/css/src/plus/side_content.min.css?I3AiJmqczd8wYmijb8bxag==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
-  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/plus/post.min.css?lbQgTsUgcyos26e49AY7PA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-<style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?k96yraexoRn3+CTmPycWNA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-
-
-<style>
-  .lg-outer .lg-item {
-    background-image: url("/img/loading.gif");
-  }
-</style>
-<div class="post-warpper animate-post">
-  <div class="post-bg-color
-    
-  "></div>
-  <div class="post-header
-    
-  ">
-    <div class="post-header-container">
-      <div class="post-title mdui-text-truncate">Hello World</div>
-      <div class="post-actions mdui-valign">
-        <div>
-          <span>编写时间：</span>
-          <span style="float: right">9月 03, 2017</span>
-          
-          <br>
-            <span>最后修改时间：</span>
-            <span>9月 04, 2017</span>
-          
-        </div>
+<div id="side-content" class="mdui-color-light-blue animate-drawer">
+  <div class="mdui-grid-tile" style="overflow: visible;">
+    <div class="bg">
+      <img src="/img/random/picHD_43.png" />
+    </div>
+    <div class="mdui-grid-tile-actions mdui-grid-tile-actions-top mdui-grid-tile-actions-gradient">
+      <div class="flex-spacer"></div>
+      <div class="mdui-grid-tile-buttons">
         
+  <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-float-right" mdui-menu="{target: '#menu-page-share'}"><i class="mdui-icon material-icons">&#xe80d;</i></button>
 
-        
-  <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#menu-post-share'}">
-    <i class="mdui-icon material-icons">&#xe80d;</i>
-  </button>
+  <ul class="mdui-menu" id="menu-page-share">
 
-  <ul class="mdui-menu" id="menu-post-share">
+    
 
     
 
@@ -341,7 +336,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=Hello World&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/03/hello-world/index.html" target="_blank" class="mdui-ripple">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=java设计模式&title=java设计模式&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io//categories/java设计模式/index.html" target="_blank" class="mdui-ripple">
               分享到QQ
           </a>
       </li>
@@ -353,7 +348,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share.php?appkey=&title=Hello World&url=http://haohaoxuexi1995.github.io//2017/09/03/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+          <a href="http://service.weibo.com/share.php?appkey=&title=java设计模式&url=http://haohaoxuexi1995.github.io//categories/java设计模式/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
               分享到微博
           </a>
       </li>
@@ -365,126 +360,105 @@
       </div>
     </div>
   </div>
-  <div class="post-container flex-spacer
-  
-  ">
-    <div class="post-adjust">
-      <div class="mdui-card card-bottom-fix menu-fix " id="blog-post">
-        <div class="warning">
-          这篇文章最后修改于
-          <span id="content-warning"></span>
-          天之前。
-          本页内容可能已经过时！
-        </div>
-        
-        
-          <div class="mdui-card-media">
-            <img src="/img/random/picHD_1.png"/>
-          </div>
-        
-        <div class="post-content mdui-typo no-margin" id="post-content">
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        </div>
-
-        
-          <div class="license mdui-typo">
-            <span>
-              本文许可协议：
-              
-                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
-              
-            </span>
-            <br />
-            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/03/hello-world/">http://haohaoxuexi1995.github.io/2017/09/03/hello-world/</a></span>
-            
-              <br />
-              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/03/hello-world/hello-world.md">http://haohaoxuexi1995.github.io/2017/09/03/hello-world/hello-world.md</a></span>
-            
-          </div>
-        
-
-        
-        
-          
-            <div class="posts-line">
-              <div class="mdui-divider"></div>
-            </div>
-            <div class="post-comment">
-              
-
-
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/03/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/03/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-      var d = document, s = d.createElement('script');
-      s.src = '//.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
-  <noscript>请启用JavaScript以查看<a href="https://disqus.com/?ref_noscript">来自Disqus的评论</a></noscript>
-
-
-            </div>
-          
-        
-      </div>
+  <div class="content">
+    <img class="mdui-img-circle avatar" src="/img/photo.jpg"/>
+    <div class="author mdui-text-center">
+      何磊
+    </div>
+    <div class="name">
+      java设计模式
+    </div>
+    <div class="length">
       
-        <div id="card-toc" class="
-        
-          mdui-color-theme
-        
-        ">
-          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.<span class="post-toc-text">Quick Start</span></span></a><ul class="mdui-list-dense post-toc-child"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.<span class="post-toc-text">Create a new post</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.<span class="post-toc-text">Run server</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.<span class="post-toc-text">Generate static files</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.<span class="post-toc-text">Deploy to remote sites</span></span></a></a></ul></a></ul>
-        </div>
-      
+      1篇文章
     </div>
   </div>
-  <div class="post-pagination mdui-color-theme">
+</div>
+<div id="contentLocation"></div>
+
+
+
+<main>
+  <div class="posts-container column-3">
+
+</div>
+<div id="content-list" class="animate-post">
   
-    <div class="prev mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/04/xianxingbiao/" class="content no-text-decoration mdui-text-left">
-        <div>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
-        </div>
-        <div class="mdui-typo-title mdui-text-truncate">
-          java_线性表
-        </div>
-      </a>
+    <div class="content-item">
+      
+  
+<style id="index_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("index_css","/css/src/plus/index.min.css?WYKJSRDQmvHqC3U1Wgs23g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+<div class="mdui-card card-bottom-fix  mdui-center">
+  <div class="posts-title mdui-typo">
+    <a href="/2017/09/04/decorator/" target="_self">
+      
+      java_装饰者模式
+    </a>
+  </div>
+  <div class="posts-line">
+    <div class="mdui-divider"></div>
+  </div>
+  <div class="posts-content">
+    在某些情况下,你需要对象的行为发生一些细小的变化,并且这些变化可以进行组合,这时你就需要装饰者模式.装饰者模式是在...
+  </div>
+  
+    <div class="mdui-card-media">
+      <img src="/img/random/picHD_7.png"/>
     </div>
   
-
-  
-      <div class="flex-spacer mdui-hidden-xs"></div>
+  <div class="posts-bottom">
     
+      <div class="mdui-chip">
+        <span class="mdui-chip-icon"><i class="mdui-icon
+        
+          mdui-text-color-black-icon
+        
+         material-icons mdui-text-center">&#xe149;</i></span>
+      </div>
+      <div class="content mdui-typo">
+        
+          <a href="/categories/java设计模式/">
+            <span>java设计模式</span>
+          </a>
+        
+      </div>
+    
+    
+      <div class="mdui-chip">
+        <span class="mdui-chip-icon"><i class="mdui-icon
+        
+          mdui-text-color-black-icon
+        
+         fa fa-tags mdui-text-center"></i></span>
+      </div>
+      <div class="content mdui-typo">
+        
+          <a href="/tags/后端/">
+            <span>后端</span>
+          </a>
+        
+      </div>
+    
+    <div class="flex-spacer"></div>
+    <div class="mdui-typo-caption-opacity mdui-valign">
+      <span>9月 04, 2017</span>
+    </div>
+  </div>
 </div>
 
+
+
+    </div>
   
-    <button id="button-toc" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" style="z-index: 9;" mdui-menu="{target: '#menu-toc', fixed: true}">
-  <i class="mdui-icon material-icons">&#xe242;</i>
+</div>
+
+
+
+
+<button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
+  <i class="mdui-icon material-icons">&#xe5d8;</i>
 </button>
-<ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-</ul>
 
-
-  
-
-</div>
 
 </main>
 
@@ -522,113 +496,120 @@
 </script>
 
 
-  <script type="text/ls-javascript" id="toc-active-script">
-  if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
-    window.addEventListener("load", function() {
-      var timer;
-      function doWork() {
-        listens.forEach(function(value, index) {
-          value[1]();
-          value[0].classList.remove("mdui-list-item-active");
+
+
+
+
+  
+  <script type="text/javascript">
+    (function() {
+      var items = document.querySelectorAll("div#content-list .content-item");
+      var list = document.querySelector("div.posts-container");
+      var columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
+      var level = 4;
+      var sm = 1;
+      var column1Width = 1024;
+      var column2Width = 1400;
+      list.innerHTML = "";
+      function cleanUpdate() {
+        items = document.querySelectorAll("div#content-list .content-item");
+        list.innerHTML = '';
+        columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
+        level = 4;
+        updateList();
+      }
+      window.postListCleanUpdate = cleanUpdate;
+      function getColumnNums() {
+        if (document.body.clientWidth <= column1Width) {
+          return 1
+        }
+        if (document.body.clientWidth <= column2Width) {
+          return 2
+        }
+        return 3
+      }
+      function updateList() {
+        var ColumnNums = getColumnNums();
+        if (level == ColumnNums) return;
+        level = ColumnNums;
+        list.setAttribute("class", "column-" + ColumnNums + " posts-container animate-post")
+        Array.prototype.forEach.call(items, function(value, index) {
+          var to = index % ColumnNums;
+          columns[to].appendChild(value);
         })
-        let actionToc = (listens[listens.reduce(function(r, v, index) {
-          if (v[2] == true) {
-            return index;
-          } else return r;
-        }, undefined)] || [])[0] || listens[0][0];
-        actionToc.classList.add("mdui-list-item-active");
-        if(actionToc.getClientRects().length == 0)return;
-        showToc(actionToc);
+        columns.forEach(function(value) {
+          list.appendChild(value)
+        })
       }
+      window.addEventListener("resize", updateList);
+      updateList();
+    })()
+  </script>
 
-      function showToc(toc) {
-        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
-        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
-        let offset = 0;
-        if (offsetTop < 0) offset = offsetTop;
-        if (offsetBottom > 0) offset = offsetBottom;
-        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
-        clearInterval(timer);
-        timer = setInterval(function() {
-          var now = cardToc.scrollTop;
-          var speed = (targetTop - now) / 10;
-          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-          if (Math.abs(now - targetTop) < 1) {
-            clearInterval(timer);
-          }
-          cardToc.scrollTop = now + speed;
-        }, 30);
-      }
-      var listens = [];
-      var cardToc = document.querySelector('#card-toc');
-      var links = document.querySelectorAll("a.post-toc-link");
-      var toclist = document.querySelector("#card-toc > ul");
-      Array.prototype.forEach.call(links, function(value, index) {
-        var id = (value.getAttribute("href") || "#").slice(1);
-        var element = document.getElementById(id);
-        listens.push([value, function() {
-          var readed = false;
-          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
-            readed = true;
-          } else {
-            readed = false;
-          }
-          listens[index][2] = readed;
-        }, false])
-      })
-      doWork();
-      window.addEventListener("scroll", doWork)
-    });
-  }
-</script>
 
-  <script type="text/ls-javascript" id="post-lg-script">
-  var images = document.querySelectorAll('#post-content img')
-  for (i = 0; i < images.length; i++) {
-    images[i].addEventListener("click", openLG);
-  }
-  function openLG() {
-    var img_src = this.getAttribute('src');
-    var img_alt = this.getAttribute('alt');
-    lightGallery(this, {
-      dynamic: true,
-      counter: false,
-      dynamicEl: [{
-        "src": img_src,
-        'subHtml': "<span author>何磊</span> • 公开<div descr>" + img_alt + "</div>"
-      }],
-    });
-  }
-</script>
 
-  <!-- content warning -->
-<script type="text/ls-javascript" id="content-warning-script">
-  (function() {
-    var postLastModifiedDate = 1504517603591
-    var today = (new Date()).getTime()
-    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
-    if (difference >= 100) {
-      document.querySelector('div.warning').style.display = 'block'
-      document.querySelector('#content-warning').textContent = difference
+
+
+  <script type="text/ls-javascript" id="style-changing-script">
+  var content_flag = false;
+  var appbar = document.querySelector('div#blog-appbar')
+  var body = document.querySelector('body')
+
+  window.addEventListener('scroll', function() {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    var divTop = document.querySelector('div#contentLocation').offsetTop
+    var contentLocation = divTop - scrollTop - 56;
+
+    if (!content_flag && contentLocation < 0 && window.innerWidth < 860) {
+      appbar.classList.add('style-fix');
+      body.classList.remove('style-fix');
+      content_flag = true;
+    } else if (content_flag && contentLocation >= 0 && window.innerWidth < 860) {
+      appbar.classList.remove('style-fix');
+      body.classList.add('style-fix');
+      content_flag = false;
+    };
+  })
+
+  function styleChanging() {
+    var hide = new mdui.Headroom('div#blog-appbar');
+    var windowWidth = window.innerWidth,
+      toLeftWidth = 860;
+    if (windowWidth < toLeftWidth) {
+      hide.enable();
+    } else {
+      hide.disable();
     }
+  };
+  styleChanging();
+</script>
+
+
+
+
+
+
+  <script type="text/ls-javascript" id="to-top-script">
+  /* fab */
+  (function() {
+    var pageFlag = false;
+    var fab = new mdui.Fab('#toTop');
+    fab.hide();
+    window.addEventListener('scroll', function() {
+      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+      var divTop = document.querySelector('div#top').offsetTop
+      var pageLocation = divTop - bodyTop;
+      if (!pageFlag && pageLocation < 0) {
+        fab.show();
+        pageFlag = true;
+      } else if (pageFlag && pageLocation >= 0) {
+        fab.hide();
+        pageFlag = false;
+      }
+    });
   })();
 </script>
 
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -636,8 +617,6 @@
   
 
 
-
-  <script>lsloader.load("lightgallery_js","/js/lightgallery.min.js?tQptxVaCRzQ3zx70gMUYig==", true)</script>
 
 
 

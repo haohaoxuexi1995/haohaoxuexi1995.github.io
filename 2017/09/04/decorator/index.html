@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>Hello World - Blog</title>
+  <title>java_装饰者模式 - Blog</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -40,7 +40,7 @@
 
   <meta name="author" content="何磊">
   
-  <meta name="keywords" content="blog, hexo, mdui">
+  <meta name="keywords" content="blog, hexo, mdui,后端">
 
   <!--iOS -->
   <meta name="apple-mobile-web-app-title" content="Blog">
@@ -55,11 +55,11 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://haohaoxuexi1995.github.io">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="Hello World - Blog | Blog">
+  <meta property="og:title" content="java_装饰者模式 - Blog | Blog">
   <meta property="og:image" content="/img/photo.jpg" />
   
 
-    
+    <meta property="og:article:tag" content="后端"> 
 
   <!-- Cache -->
   <meta http-equiv="Cache-Control" content="max-age=7200" />
@@ -313,15 +313,11 @@
     
   ">
     <div class="post-header-container">
-      <div class="post-title mdui-text-truncate">Hello World</div>
+      <div class="post-title mdui-text-truncate">java_装饰者模式</div>
       <div class="post-actions mdui-valign">
         <div>
           <span>编写时间：</span>
-          <span style="float: right">9月 03, 2017</span>
-          
-          <br>
-            <span>最后修改时间：</span>
-            <span>9月 04, 2017</span>
+          <span style="float: right">9月 04, 2017</span>
           
         </div>
         
@@ -341,7 +337,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=Hello World&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/03/hello-world/index.html" target="_blank" class="mdui-ripple">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=java_装饰者模式&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/04/decorator/index.html" target="_blank" class="mdui-ripple">
               分享到QQ
           </a>
       </li>
@@ -353,7 +349,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share.php?appkey=&title=Hello World&url=http://haohaoxuexi1995.github.io//2017/09/03/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+          <a href="http://service.weibo.com/share.php?appkey=&title=java_装饰者模式&url=http://haohaoxuexi1995.github.io//2017/09/04/decorator/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
               分享到微博
           </a>
       </li>
@@ -379,19 +375,20 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_1.png"/>
+            <img src="/img/random/picHD_33.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+          <p>在某些情况下,你需要对象的行为发生一些细小的变化,并且这些变化可以进行组合,这时你就需要<strong>装饰者模式</strong>.装饰者模式是在不必改变原类文件和使用继承的情况下，动态地扩展一个对象的功能。它是通过创建一个包装对象，也就是装饰来包裹真实的对象。</p>
+<h3 id="通俗的理解"><a href="#通俗的理解" class="headerlink" title="通俗的理解"></a>通俗的理解</h3><pre><code>比如说我们修房子,当房子还造好的时候,还只是很空旷的一片,这是我们需要门,我们就可以给它装饰一个门,需要床,就可以装饰一间床,需要窗帘的时候,我们又可以买窗帘,如果此时我们不需要门了,我们又可以将门去下,等待再次被需要的时候.
+</code></pre><h3 id="举个不恰当的小例子"><a href="#举个不恰当的小例子" class="headerlink" title="举个不恰当的小例子"></a>举个不恰当的小例子</h3><pre><code>如果现在有一个women,她有智商和颜值,并且我们可以获得她的智商和颜值.那么她的实现类应该为:
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">	package decorator;</div><div class="line"></div><div class="line">	public class Women &#123;</div><div class="line"></div><div class="line">		private int beauty; // 一个女人的颜值</div><div class="line">		private int iq; // 一个女人的IQ</div><div class="line"></div><div class="line">		public Women(int beauty, int iq) &#123;</div><div class="line">			this.beauty = beauty;</div><div class="line">			this.iq = iq;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		public int <span class="function"><span class="title">getBeauty</span></span>() &#123;</div><div class="line">			<span class="built_in">return</span> beauty;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		public int <span class="function"><span class="title">getIq</span></span>() &#123;</div><div class="line">			<span class="built_in">return</span> iq;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">```	</div><div class="line">此时的我们可以测试一下这个类:</div><div class="line">``` bash</div><div class="line">	package decorator;</div><div class="line"></div><div class="line">	public class Test &#123;</div><div class="line"></div><div class="line">		public static void main(String[] args) &#123;</div><div class="line">			Women fengjie=new Women(50, 70);</div><div class="line">			System.out.println(fengjie.getBeauty()+<span class="string">" "</span>+fengjie.getIq());</div><div class="line">		&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>不出所料,打印的结果为50 70.但是如果我们让这个women去读书呢?读书不是可以增加IQ呢.于是我们创建一个StudyWomen类<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">package decorator;</div><div class="line"></div><div class="line">public class StudyWomen extends Women&#123;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * StudyWomen的构造方法</div><div class="line">	 * @param beauty</div><div class="line">	 * @param iq</div><div class="line">	 */</div><div class="line">	public StudyWomen(int beauty, int iq) &#123;</div><div class="line">		super(beauty, iq);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 *由于是学习过后的women,所以颜值不变</div><div class="line">	 * </div><div class="line">	 */</div><div class="line">	public int <span class="function"><span class="title">getBeauty</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> super.getBeauty();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 *在父类的基础上将IQ增加20</div><div class="line">	 * </div><div class="line">	 */</div><div class="line">	public int <span class="function"><span class="title">getIq</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> super.getIq()+20;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>此时的我们可以测试一下这个类:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package decorator;</div><div class="line"></div><div class="line">public class Test &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		StudyWomen fengjie=new StudyWomen(50, 70);</div><div class="line">		System.out.println(fengjie.getBeauty()+<span class="string">" "</span>+fengjie.getIq());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>哈哈更不出所料,打印的结果为50 90.但是这个women不喜欢读书,喜欢打扮呢?那IQ就不会增加了,相反增加的是颜值,于是我们创建一个DressWomen类<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">package decorator;</div><div class="line"></div><div class="line">public class DressWomen extends Women&#123;</div><div class="line"></div><div class="line">	public DressWomen(int beauty, int iq) &#123;</div><div class="line">		super(beauty, iq);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	public int <span class="function"><span class="title">getBeauty</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> super.getBeauty()+20;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int <span class="function"><span class="title">getIq</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> super.getIq();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>此时的我们可以测试一下这个类:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package decorator;</div><div class="line"></div><div class="line">public class Test &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		DressWomen fengjie=new DressWomen(50, 70);</div><div class="line">		System.out.println(fengjie.getBeauty()+<span class="string">" "</span>+fengjie.getIq());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>哈哈更更不出所料,打印的结果为70 70.但是,你想过没有,如果这个women又喜欢读书,而且喜欢打扮呢?那么,我们现在就需要继承StudyWomen或者DressWomen中的其中一个,重写另一个方法,那我继承DressWomen<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">package decorator;</div><div class="line"></div><div class="line">public class StudyDressWomen extends DressWomen&#123;</div><div class="line"></div><div class="line">	public StudyDressWomen(int beauty, int iq) &#123;</div><div class="line">		super(beauty, iq);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public int <span class="function"><span class="title">getIq</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> super.getIq()+20;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>哈哈更更更不出所料,打印的结果为70 90.但不知你想过没有,如果这个women还懂礼貌呢,是不是要在women类中添加一个懂礼貌方法,是不是又要写复合类,继承StudyDressWomen类,覆盖懂礼貌这个方法,如果还有上百种优点,那这个继承体系是不是就很庞大呢,100个特性的女人继承99个特性的女人,99个特性的女人,继承98个特性的女人等等…有没得什么可以解决的呢,这个问题想一想,下次再说..</p>
 
         </div>
 
@@ -404,14 +401,43 @@
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/03/hello-world/">http://haohaoxuexi1995.github.io/2017/09/03/hello-world/</a></span>
+            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/04/decorator/">http://haohaoxuexi1995.github.io/2017/09/04/decorator/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/03/hello-world/hello-world.md">http://haohaoxuexi1995.github.io/2017/09/03/hello-world/hello-world.md</a></span>
+              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/04/decorator/decorator.md">http://haohaoxuexi1995.github.io/2017/09/04/decorator/decorator.md</a></span>
             
           </div>
         
 
+        
+          <div class="posts-info">
+            
+            <div class="flex-spacer"></div>
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/categories/java设计模式/">
+                    <span>java设计模式</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/tags/后端/">
+                    <span>后端</span>
+                  </a>
+                
+              </div>
+            
+          </div>
         
         
           
@@ -425,8 +451,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/03/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/03/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/04/decorator/';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/04/decorator/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
@@ -448,28 +474,28 @@
           mdui-color-theme
         
         ">
-          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.<span class="post-toc-text">Quick Start</span></span></a><ul class="mdui-list-dense post-toc-child"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.<span class="post-toc-text">Create a new post</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.<span class="post-toc-text">Run server</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.<span class="post-toc-text">Generate static files</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.<span class="post-toc-text">Deploy to remote sites</span></span></a></a></ul></a></ul>
+          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#通俗的理解"><span class="post-toc-number">1.<span class="post-toc-text">通俗的理解</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#举个不恰当的小例子"><span class="post-toc-number">2.<span class="post-toc-text">举个不恰当的小例子</span></span></a></a></ul>
         </div>
       
     </div>
   </div>
   <div class="post-pagination mdui-color-theme">
   
-    <div class="prev mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/04/xianxingbiao/" class="content no-text-decoration mdui-text-left">
+    <div class="flex-spacer mdui-hidden-xs"></div>
+  
+
+  
+    <div class="next mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/04/xianxingbiao/" class="content no-text-decoration mdui-text-right">
         <div>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
           java_线性表
         </div>
       </a>
     </div>
-  
-
-  
-      <div class="flex-spacer mdui-hidden-xs"></div>
     
 </div>
 
@@ -478,7 +504,7 @@
   <i class="mdui-icon material-icons">&#xe242;</i>
 </button>
 <ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#通俗的理解"><span class="toc-number">1.</span> <span class="toc-text">通俗的理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#举个不恰当的小例子"><span class="toc-number">2.</span> <span class="toc-text">举个不恰当的小例子</span></a></li></ol>
 </ul>
 
 
@@ -605,7 +631,7 @@
   <!-- content warning -->
 <script type="text/ls-javascript" id="content-warning-script">
   (function() {
-    var postLastModifiedDate = 1504517603591
+    var postLastModifiedDate = 1504537555090
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {
