@@ -19,33 +19,26 @@ tags:
 package decorator;
 
 public class Women {
-
 	private int beauty; // 一个女人的颜值
 	private int iq; // 一个女人的IQ
-
 	public Women(int beauty, int iq) {
 		this.beauty = beauty;
 		this.iq = iq;
 	}
-
 	public int getBeauty() {
 		return beauty;
 	}
-
 	public int getIq() {
 		return iq;
 	}
-
 }
 ```	
 
-**此时的我们可以测试一下这个类:**
+此时的我们可以测试一下这个类:
 
 ``` bash
 package decorator;
-
 public class Test {
-
 	public static void main(String[] args) {
 		Women fengjie=new Women(50, 70);
 		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
@@ -59,7 +52,6 @@ public class Test {
 package decorator;
 
 public class StudyWomen extends Women{
-
 	/**
 	 * StudyWomen的构造方法
 	 * @param beauty
@@ -68,7 +60,6 @@ public class StudyWomen extends Women{
 	public StudyWomen(int beauty, int iq) {
 		super(beauty, iq);
 	}
-
 	/**
 	 *由于是学习过后的women,所以颜值不变
 	 * 
@@ -76,7 +67,6 @@ public class StudyWomen extends Women{
 	public int getBeauty() {
 		return super.getBeauty();
 	}
-
 	/**
 	 *在父类的基础上将IQ增加20
 	 * 
@@ -84,7 +74,6 @@ public class StudyWomen extends Women{
 	public int getIq() {
 		return super.getIq()+20;
 	}
-
 }
 ```
 
@@ -92,9 +81,7 @@ public class StudyWomen extends Women{
 
 ``` bash
 package decorator;
-
 public class Test {
-
 	public static void main(String[] args) {
 		StudyWomen fengjie=new StudyWomen(50, 70);
 		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
@@ -106,31 +93,24 @@ public class Test {
 
 ``` bash
 package decorator;
-
 public class DressWomen extends Women{
-
 	public DressWomen(int beauty, int iq) {
 		super(beauty, iq);
 	}
-	
 	public int getBeauty() {
 		return super.getBeauty()+20;
 	}
-
 	public int getIq() {
 		return super.getIq();
 	}
 }
-
 ```
 
 此时的我们可以测试一下这个类:
 
 ``` bash
 package decorator;
-
 public class Test {
-
 	public static void main(String[] args) {
 		DressWomen fengjie=new DressWomen(50, 70);
 		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
@@ -142,18 +122,14 @@ public class Test {
 
 ``` bash
 package decorator;
-
 public class StudyDressWomen extends DressWomen{
-
 	public StudyDressWomen(int beauty, int iq) {
 		super(beauty, iq);
 	}
-
 	public int getIq() {
 		return super.getIq()+20;
 	}
 }
-
 ```
 
 哈哈更更更不出所料,打印的结果为70 90.但不知你想过没有,如果这个women还懂礼貌呢,是不是要在women类中添加一个懂礼貌方法,是不是又要写复合类,继承StudyDressWomen类,覆盖懂礼貌这个方法,如果还有上百种优点,那这个继承体系是不是就很庞大呢,100个特性的女人继承99个特性的女人,99个特性的女人,继承98个特性的女人等等...有没得什么可以解决的呢,这个问题想一想,下次再说..
