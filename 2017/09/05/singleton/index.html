@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>Hello World - Blog</title>
+  <title>java_单例模式 - Blog</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -40,7 +40,7 @@
 
   <meta name="author" content="何磊">
   
-  <meta name="keywords" content="blog, hexo, mdui">
+  <meta name="keywords" content="blog, hexo, mdui,后端">
 
   <!--iOS -->
   <meta name="apple-mobile-web-app-title" content="Blog">
@@ -55,11 +55,11 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://haohaoxuexi1995.github.io">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="Hello World - Blog | Blog">
+  <meta property="og:title" content="java_单例模式 - Blog | Blog">
   <meta property="og:image" content="/img/photo.jpg" />
   
 
-    
+    <meta property="og:article:tag" content="后端"> 
 
   <!-- Cache -->
   <meta http-equiv="Cache-Control" content="max-age=7200" />
@@ -313,15 +313,11 @@
     
   ">
     <div class="post-header-container">
-      <div class="post-title mdui-text-truncate">Hello World</div>
+      <div class="post-title mdui-text-truncate">java_单例模式</div>
       <div class="post-actions mdui-valign">
         <div>
           <span>编写时间：</span>
-          <span style="float: right">9月 03, 2017</span>
-          
-          <br>
-            <span>最后修改时间：</span>
-            <span>9月 04, 2017</span>
+          <span style="float: right">9月 05, 2017</span>
           
         </div>
         
@@ -341,7 +337,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=Hello World&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/03/hello-world/index.html" target="_blank" class="mdui-ripple">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=java_单例模式&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/05/singleton/index.html" target="_blank" class="mdui-ripple">
               分享到QQ
           </a>
       </li>
@@ -353,7 +349,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share.php?appkey=&title=Hello World&url=http://haohaoxuexi1995.github.io//2017/09/03/hello-world/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+          <a href="http://service.weibo.com/share.php?appkey=&title=java_单例模式&url=http://haohaoxuexi1995.github.io//2017/09/05/singleton/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
               分享到微博
           </a>
       </li>
@@ -367,6 +363,8 @@
   </div>
   <div class="post-container flex-spacer
   
+    no-toc
+  
   ">
     <div class="post-adjust">
       <div class="mdui-card card-bottom-fix menu-fix " id="blog-post">
@@ -379,20 +377,11 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_17.png"/>
+            <img src="/img/random/picHD_8.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+          
         </div>
 
         
@@ -404,14 +393,43 @@
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/03/hello-world/">http://haohaoxuexi1995.github.io/2017/09/03/hello-world/</a></span>
+            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/05/singleton/">http://haohaoxuexi1995.github.io/2017/09/05/singleton/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/03/hello-world/hello-world.md">http://haohaoxuexi1995.github.io/2017/09/03/hello-world/hello-world.md</a></span>
+              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/05/singleton/singleton.md">http://haohaoxuexi1995.github.io/2017/09/05/singleton/singleton.md</a></span>
             
           </div>
         
 
+        
+          <div class="posts-info">
+            
+            <div class="flex-spacer"></div>
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/categories/java设计模式/">
+                    <span>java设计模式</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/tags/后端/">
+                    <span>后端</span>
+                  </a>
+                
+              </div>
+            
+          </div>
         
         
           
@@ -425,8 +443,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/03/hello-world/';  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/03/hello-world/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/05/singleton/';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/05/singleton/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
@@ -443,44 +461,27 @@
         
       </div>
       
-        <div id="card-toc" class="
-        
-          mdui-color-theme
-        
-        ">
-          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.<span class="post-toc-text">Quick Start</span></span></a><ul class="mdui-list-dense post-toc-child"><a class="mdui-list-item mdui-ripple post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.<span class="post-toc-text">Create a new post</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.<span class="post-toc-text">Run server</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.<span class="post-toc-text">Generate static files</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.<span class="post-toc-text">Deploy to remote sites</span></span></a></a></ul></a></ul>
-        </div>
-      
     </div>
   </div>
   <div class="post-pagination mdui-color-theme">
   
-    <div class="prev mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/04/xianxingbiao/" class="content no-text-decoration mdui-text-left">
+    <div class="flex-spacer mdui-hidden-xs"></div>
+  
+
+  
+    <div class="next mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/04/decorator/" class="content no-text-decoration mdui-text-right">
         <div>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
-          java_线性表
+          java_装饰者模式
         </div>
       </a>
     </div>
-  
-
-  
-      <div class="flex-spacer mdui-hidden-xs"></div>
     
 </div>
-
-  
-    <button id="button-toc" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" style="z-index: 9;" mdui-menu="{target: '#menu-toc', fixed: true}">
-  <i class="mdui-icon material-icons">&#xe242;</i>
-</button>
-<ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
-</ul>
-
 
   
 
@@ -605,7 +606,7 @@
   <!-- content warning -->
 <script type="text/ls-javascript" id="content-warning-script">
   (function() {
-    var postLastModifiedDate = 1504517603591
+    var postLastModifiedDate = 1504622850749
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {
