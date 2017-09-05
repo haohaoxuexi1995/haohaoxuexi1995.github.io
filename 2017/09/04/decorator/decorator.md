@@ -17,7 +17,6 @@ tags:
 
 ``` bash
 package decorator;
-
 public class Women {
 	private int beauty; // 一个女人的颜值
 	private int iq; // 一个女人的IQ
@@ -50,7 +49,6 @@ public class Test {
 
 ``` bash
 package decorator;
-
 public class StudyWomen extends Women{
 	/**
 	 * StudyWomen的构造方法
@@ -132,4 +130,94 @@ public class StudyDressWomen extends DressWomen{
 }
 ```
 
-哈哈更更更不出所料,打印的结果为70 90.但不知你想过没有,如果这个women还懂礼貌呢,是不是要在women类中添加一个懂礼貌方法,是不是又要写复合类,继承StudyDressWomen类,覆盖懂礼貌这个方法,如果还有上百种优点,那这个继承体系是不是就很庞大呢,100个特性的女人继承99个特性的女人,99个特性的女人,继承98个特性的女人等等...有没得什么可以解决的呢,这个问题想一想,下次再说..
+哈哈更更更不出所料,打印的结果为70 90.但不知你想过没有,如果这个women还懂礼貌呢,是不是要在women类中添加一个懂礼貌方法,是不是又要写复合类,继承StudyDressWomen类,覆盖懂礼貌这个方法,如果还有上百种优点,那这个继承体系是不是就很庞大呢,100个特性的女人继承99个特性的女人,99个特性的女人,继承98个特性的女人等等...有没得什么可以解决的呢,这个问题想一想,下面再说..
+
+现在,我们既然知道了继承体系的问题,那么,用什么解决呢?我们还是可以创建一个新的Women类
+
+``` bash
+package decorator2;
+public class Women {
+	private int beauty; // 一个女人的颜值
+	private int iq; // 一个女人的IQ
+	public Women(int beauty, int iq) {
+		this.beauty = beauty;
+		this.iq = iq;
+	}
+	public Women() {
+	}
+	public int getBeauty() {
+		return beauty;
+	}
+	public int getIq() {
+		return iq;
+	}
+}
+```
+我们把覆盖了的无参构造方法补了出来(作用后面解释),然后我们写一个化妆的女人类
+
+``` bash
+package decorator2;
+public class DressWomen extends Women{
+	private Women women;
+	public DressWomen(Women women) {
+		this.women=women;
+	}
+	public int getBeauty() {
+		return women.getBeauty()+20;
+	}
+	public int getIq() {
+		return women.getIq();
+	}	
+}
+```
+化妆的女人类有什么变化呢?现在,我们在化妆的女人类中增加了一个私有的Women对象,构造方法也变成了将传入的Women对象赋值给我们内部的私有Women对象,获得颜值等也从Women对象取得,这个时候父类无参构造方法的作用就体现出来了,因为化妆的女人类的构造方法中第一行会隐式的调用父类的构造方法,如果我们没写父类的无参构造方法,我们就需要在本类的第一行主动的调用父类的有参构造方法,而这行代码对我们没用,而且会使代码变得冗杂,所以我们就在父类中补上无参的构造方法,那样本类的构造方法第一行就不需要写了.
+
+我们再写一个学习的女人类
+
+``` bash
+package decorator2;
+public class StudyWomen extends Women{
+	private Women women;
+	public StudyWomen(Women women) {
+		this.women=women;
+	}
+	public int getBeauty() {
+		return women.getBeauty();
+	}
+	public int getIq() {
+		return women.getIq()+20;
+	}	
+}
+```
+测试一下:
+``` bash
+package decorator2;
+public class Test {
+	public static void main(String[] args) {
+		Women fengjie=new Women(50, 70);
+		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
+	}
+}
+```
+又是不出所料,打印的结果为50 70.但如果我们这样啊?
+``` bash
+package decorator2;
+public class Test {
+	public static void main(String[] args) {
+		Women fengjie=new DressWomen(new Women(50, 70));
+		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
+	}
+}
+```
+这次打印的是70 70,why?当我们new出Women的时候,此时的颜值和智商分别是50与70,但是当我们将这个Women传入DressWomen中的时候,就调用了DressWomen的构造方法,将我们new的这个Women赋值给了DressWomen类中的私有的Women,并且getBeauty方法将Women的颜值加了20,由于构造方法传入的都是Women这个父类(意味着Women这个体系之下的对象都可以传入),所以如果我们需要将这个Women变成学习后的Women,我们则可以这样(链式调用):
+``` bash
+package decorator2;
+public class Test {
+	public static void main(String[] args) {
+		Women fengjie=new StudyWomen(new DressWomen(new Women(50, 70)));
+		System.out.println(fengjie.getBeauty()+" "+fengjie.getIq());
+	}
+}
+```
+结果是:70 90,表示我们以后如果还有一个懂礼貌的Women,那么我们只需继承Women类,进行以上的操作,然后new politWomen(new StudyWomen(new DressWomen(new Women(50, 70))))了,这些修饰类可以随意的组合,以满足你的要求,这就是装饰者模式
+其实,这个装饰者模式还有很多累赘的代码
