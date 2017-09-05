@@ -248,4 +248,146 @@ public class StudyWomen extends WrapperWomen{
 	}	
 }
 ```
-测试代码和上面一样,没有问题,现在就是一个较好的装饰者设计模式了.
+测试代码和上面一样,没有问题,现在就是一个较好的装饰者设计模式了.但是实际装饰者一般都是接口实现,而且接口实现更简单,我写一下接口实现(我们造枪,枪需要瞄准镜,有的枪没有瞄准镜,防抖器,消音器等等,这些就相当于枪的装饰),和上面的差不多,就没什么解释了,你可以熟悉一下:
+``` bash
+package decorator3;
+public interface Gun {
+	public void load();//枪上膛
+	public void unload();//枪下膛
+	public void aim();//枪瞄准
+	public void shoot();//枪射击
+}
+```
+这是一个枪的接口,枪有Ak47和AWM(狙击枪)等:
+``` bash
+package decorator3;
+public class Ak47 implements Gun{
+	public void load() {
+		System.out.println("Ak47上膛中....");
+	}
+	public void unload() {
+		System.out.println("Ak47下膛中....");
+	}
+	public void aim() {
+		System.out.println("Ak47瞄准中....");
+	}
+	public void shoot() {
+		System.out.println("Ak47射击中....");
+	}
+}
+```
+``` bash
+package decorator3;
+public class AWM implements Gun{
+	public void load() {
+		System.out.println("AWM上膛中....");
+	}
+	public void unload() {
+		System.out.println("AWM下膛中....");
+	}
+	public void aim() {
+		System.out.println("AWM瞄准中....");
+	}
+	public void shoot() {
+		System.out.println("AWM射击中....");
+	}
+}
+```
+我们写一个WrapperGun:
+``` bash
+package decorator3;
+public abstract class WrapperGun implements Gun{
+	private Gun gun;
+	public WrapperGun(Gun gun) {
+		super();
+		this.gun = gun;
+	}
+	public void load(){
+		gun.load();
+	};//枪上膛
+	public void unload(){
+		gun.unload();
+	};//枪下膛
+	public void aim(){
+		gun.aim();
+	};//枪瞄准
+	public void shoot(){
+		gun.shoot();
+	};//枪射击
+}
+```
+然后我们的装饰
+``` bash
+package decorator3;
+public class Muffler extends WrapperGun{
+	public Muffler(Gun gun) {
+		super(gun);
+	}
+	public void shoot() {
+		System.out.println("增加了消音器,声音减少60%....");
+		super.shoot();
+	}
+}
+```
+``` bash
+package decorator3;
+public class Fangdou extends WrapperGun{
+	public Fangdou(Gun gun) {
+		super(gun);
+	}
+	public void shoot() {
+		System.out.println("增加了防抖器,稳定性增加了30%...");
+		super.shoot();
+	}
+}
+```
+``` bash
+package decorator3;
+public class Miaozhun extends WrapperGun{
+	public Miaozhun(Gun gun) {
+		super(gun);
+	}
+	public void aim() {
+		System.out.println("增加了瞄准器,准确性性增加了50%...");
+		super.aim();
+	}
+}
+```
+测试代码:
+``` bash
+package decorator3;
+public class Test {
+	public static void main(String[] args) {
+		Gun ak=new Ak47();
+		//ak需要防抖器
+		Gun fangdouAk=new Fangdou(ak);
+		//ak需要消音器
+		Gun fangdouXiaoyingAk=new Muffler(fangdouAk);
+		fangdouXiaoyingAk.shoot();
+	}
+}
+```
+结果:   增加了消音器,声音减少60%....
+       增加了防抖器,稳定性增加了30%...
+       Ak47射击中....
+
+AWM三个装饰都有:
+``` bash
+package decorator3;
+public class Test {
+	public static void main(String[] args) {
+		Gun awm=new Muffler(new Miaozhun(new Fangdou(new AWM())));
+		awm.aim();
+		awm.shoot();
+	}
+}
+```
+结果: 	增加了瞄准器,准确性性增加了50%...
+		AWM瞄准中....
+		增加了消音器,声音减少60%....
+		增加了防抖器,稳定性增加了30%...
+		AWM射击中....
+
+这就是比较标准的装饰者模式了,不知道你发现没得,这个和IO流中的很像,没错,IO流在底层就是装饰者模式.装饰者模式的装饰可以不同的组合,而且只需要实现对应的Wrapper类,是不是很神奇.
+
+**若有不足,请批评指正**
