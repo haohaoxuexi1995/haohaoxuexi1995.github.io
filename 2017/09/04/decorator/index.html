@@ -201,14 +201,14 @@
         </div>
         <div class="mdui-collapse-item-body mdui-list">
           
-            <a href="/categories/数据结构java/" class="mdui-list-item mdui-ripple" style="display: flex">
-              数据结构java
+            <a href="/categories/java设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
+              java设计模式
               <div style="flex-grow: 1;"></div>
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
             </a>
           
-            <a href="/categories/java设计模式/" class="mdui-list-item mdui-ripple" style="display: flex">
-              java设计模式
+            <a href="/categories/数据结构java/" class="mdui-list-item mdui-ripple" style="display: flex">
+              数据结构java
               <div style="flex-grow: 1;"></div>
               <span class="badge new mdui-color-theme-accent" data-badge-caption="">1</span>
             </a>
@@ -379,7 +379,7 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_3.png"/>
+            <img src="/img/random/picHD_31.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
@@ -408,7 +408,9 @@
 <p>测试一下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">package decorator2;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Women fengjie=new Women(50, 70);</div><div class="line">		System.out.println(fengjie.getBeauty()+<span class="string">" "</span>+fengjie.getIq());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>又是不出所料,打印的结果为50 70.但如果我们这样啊?<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">package decorator2;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Women fengjie=new DressWomen(new Women(50, 70));</div><div class="line">		System.out.println(fengjie.getBeauty()+<span class="string">" "</span>+fengjie.getIq());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>这次打印的是70 70,why?当我们new出Women的时候,此时的颜值和智商分别是50与70,但是当我们将这个Women传入DressWomen中的时候,就调用了DressWomen的构造方法,将我们new的这个Women赋值给了DressWomen类中的私有的Women,并且getBeauty方法将Women的颜值加了20,由于构造方法传入的都是Women这个父类(意味着Women这个体系之下的对象都可以传入),所以如果我们需要将这个Women变成学习后的Women,我们则可以这样(链式调用):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">package decorator2;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Women fengjie=new StudyWomen(new DressWomen(new Women(50, 70)));</div><div class="line">		System.out.println(fengjie.getBeauty()+<span class="string">" "</span>+fengjie.getIq());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>结果是:70 90,表示我们以后如果还有一个懂礼貌的Women,那么我们只需继承Women类,进行以上的操作,然后new politWomen(new StudyWomen(new DressWomen(new Women(50, 70))))了,这些修饰类可以随意的组合,以满足你的要求,这就是装饰者模式<br>其实,这个装饰者模式还有很多累赘的代码</p>
+<p>结果是:70 90,表示我们以后如果还有一个懂礼貌的Women,那么我们只需继承Women类,进行以上的操作,然后new politWomen(new StudyWomen(new DressWomen(new Women(50, 70))))了,这些修饰类可以随意的组合,以满足你的要求,这就是装饰者模式<br>其实,这个装饰者模式还有很多累赘的代码,比如那个私有的Women,还有不做改变的方法等,这些公共的内容我们可以抽取出来,组成一个新类WrapperWomen,如下代码:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">package decorator2;</div><div class="line">public class WrapperWomen extends Women&#123;</div><div class="line">	private Women women;</div><div class="line">	public WrapperWomen(Women women) &#123;</div><div class="line">		this.women=women;</div><div class="line">	&#125;</div><div class="line">	public int <span class="function"><span class="title">getBeauty</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> women.getBeauty();</div><div class="line">	&#125;</div><div class="line">	public int <span class="function"><span class="title">getIq</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> women.getIq();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>现在,我们的DressWomen和StudyWomen都只需继承此类.这是StudyWomen的代码(因为子类会继承父类的方法和成员)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package decorator2;</div><div class="line">public class StudyWomen extends WrapperWomen&#123;</div><div class="line">	public StudyWomen(Women women) &#123;</div><div class="line">		super(women);</div><div class="line">	&#125;</div><div class="line">	public int <span class="function"><span class="title">getIq</span></span>() &#123;</div><div class="line">		<span class="built_in">return</span> super.getIq()+20;</div><div class="line">	&#125;	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>测试代码和上面一样,没有问题,现在就是一个较好的装饰者设计模式了.</p>
 
         </div>
 
@@ -651,7 +653,7 @@
   <!-- content warning -->
 <script type="text/ls-javascript" id="content-warning-script">
   (function() {
-    var postLastModifiedDate = 1504605754125
+    var postLastModifiedDate = 1504614005315
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {

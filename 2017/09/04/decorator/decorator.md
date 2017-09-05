@@ -220,4 +220,32 @@ public class Test {
 }
 ```
 结果是:70 90,表示我们以后如果还有一个懂礼貌的Women,那么我们只需继承Women类,进行以上的操作,然后new politWomen(new StudyWomen(new DressWomen(new Women(50, 70))))了,这些修饰类可以随意的组合,以满足你的要求,这就是装饰者模式
-其实,这个装饰者模式还有很多累赘的代码
+其实,这个装饰者模式还有很多累赘的代码,比如那个私有的Women,还有不做改变的方法等,这些公共的内容我们可以抽取出来,组成一个新类WrapperWomen,如下代码:
+``` bash
+package decorator2;
+public class WrapperWomen extends Women{
+	private Women women;
+	public WrapperWomen(Women women) {
+		this.women=women;
+	}
+	public int getBeauty() {
+		return women.getBeauty();
+	}
+	public int getIq() {
+		return women.getIq();
+	}
+}
+```
+现在,我们的DressWomen和StudyWomen都只需继承此类.这是StudyWomen的代码(因为子类会继承父类的方法和成员)
+``` bash
+package decorator2;
+public class StudyWomen extends WrapperWomen{
+	public StudyWomen(Women women) {
+		super(women);
+	}
+	public int getIq() {
+		return super.getIq()+20;
+	}	
+}
+```
+测试代码和上面一样,没有问题,现在就是一个较好的装饰者设计模式了.
