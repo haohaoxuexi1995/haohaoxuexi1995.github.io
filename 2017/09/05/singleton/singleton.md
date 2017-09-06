@@ -92,4 +92,76 @@ public class Test {
 结果: 	singleton.Sun@7f39ebdb
 		singleton.Sun@7f39ebdb
 好,现在是一个太阳了...这种创建单例的写法我们也叫做饿汉式,为什么?因为在类初始化时，已经自行实例化(感觉很饿的样子),不管你的对象是否为空.饿汉式在类创建的同时就已经创建好一个静态的对象供系统使用,以后不再改变,所以天生是线程安全的.
-而且由于对象创建好了,所以反应速度快,(推荐使用),懒汉式下次再说...
+而且由于对象创建好了,所以反应速度快,(推荐使用).
+但是单例模式还有一种懒汉式
+``` bash
+package singleton;
+public class Sun {
+	private static Sun sun;
+	private Sun(){	
+	}
+	public static Sun getInstance(){
+		if(sun==null){
+			sun=new Sun();
+		}
+		return sun;
+	}
+	public void light(){
+		System.out.println("太阳会发光,阳光普照");
+	}
+}
+```
+懒汉式就是开始不自行实例化,当我们需要的时候,先判断是否为空,为空才实例化,不为空直接返回.但是在多线程情况下,这是有线程安全问题的,比如当Sun还没初始化的时候,几个线程同时调用getInstance()方法,给Sun初始化,造成内存中不止一个Sun对象,这就可能使单例失败.最简单的方法是在getInstance()方法上加一个synchronized修饰符,如下:
+``` bash
+	public static synchronized Sun getInstance(){
+		if(sun==null){
+			sun=new Sun();
+		}
+		return sun;
+	}
+```
+当一个线程进入getInstance()时,就将此方法锁住,别的线程无法进来,就无法造成同时初始化的情况.但是,安全是安全了,由于方法被锁住,每次访问这个方法的时候,就只能让一个进入,另外的在外面等待,就带来的性能影响。所以,这种是并不可取的,所以我们不是还有一种锁住的方法吗,如下:
+``` bash
+	public static Sun getInstance(){
+		if(sun==null){
+			//1
+			synchronized(Sun.class){
+				sun=new Sun();
+			}
+		}		
+		return sun;
+	}
+```
+这样,我们只锁住初始化的这段,貌似的样子(只有当第一次实例化的时候锁住,防止了同时实例化,当sun已经存在的时候,就可以随时进来拿了).但是不知你想过没得,这种情况也有问题,如果刚开始没初始化,AB都为空,都进去我在代码中标注的1里面,于是A再进入锁住的内容中,初始化一次,A完过后,B再进入其中,再次初始化一次,这就造成了单例失败,所以我们可以这样:
+``` bash
+	public static  Sun getInstance(){
+		if(sun==null){
+			synchronized(Sun.class){
+				if(sun==null){
+					sun=new Sun();
+				}
+			}
+		}	
+		return sun;
+	}
+```
+双重检查,由于当A出来的时候,已经存在sun了,所以B就不会通过第二重检查,就不会再次new了,而且,以后进入的时候,由于sun!=null(没锁就不会等待),就直接返回sun,是不是就解决了性能问题,这就是双重检查的懒汉式.但是懒汉式还有一种静态内部类方式:
+``` bash
+package singleton;
+public class Sun {
+	private static class LazyHolder {    
+	       private static final Sun sun = new Sun();    
+	} 
+	private Sun(){
+	}
+	public static  Sun getInstance(){
+		return LazyHolder.sun;
+	}
+	public void light(){
+		System.out.println("太阳会发光,阳光普照");
+	}
+}
+```
+这种也实现了线程安全,又避免了同步带来的性能影响.由于java中内部类加载时间：一般是只有运行到了才会初始化，而不是外部内加载的时候（不管是静态还是非静态内部类）,所以当我们调用getInstance()的时候,初始化内部类,顺带初始化sun,这是不是懒汉式(我们用到的时候才初始化)?但是单例模式除了懒汉和饿汉,还有一种登记式单例,但用的很少,可以忽略。
+
+**若有不足,请批评指正**
