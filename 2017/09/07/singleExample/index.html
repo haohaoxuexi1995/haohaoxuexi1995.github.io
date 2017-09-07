@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>java_单例模式 - Blog</title>
+  <title>java_单例模式应用 - Blog</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -55,7 +55,7 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://haohaoxuexi1995.github.io">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="java_单例模式 - Blog | Blog">
+  <meta property="og:title" content="java_单例模式应用 - Blog | Blog">
   <meta property="og:image" content="/img/photo.jpg" />
   
 
@@ -313,15 +313,11 @@
     
   ">
     <div class="post-header-container">
-      <div class="post-title mdui-text-truncate">java_单例模式</div>
+      <div class="post-title mdui-text-truncate">java_单例模式应用</div>
       <div class="post-actions mdui-valign">
         <div>
           <span>编写时间：</span>
-          <span style="float: right">9月 05, 2017</span>
-          
-          <br>
-            <span>最后修改时间：</span>
-            <span>9月 06, 2017</span>
+          <span style="float: right">9月 07, 2017</span>
           
         </div>
         
@@ -341,7 +337,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=java_单例模式&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/05/singleton/index.html" target="_blank" class="mdui-ripple">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=java_单例模式应用&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/07/singleExample/index.html" target="_blank" class="mdui-ripple">
               分享到QQ
           </a>
       </li>
@@ -353,7 +349,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share.php?appkey=&title=java_单例模式&url=http://haohaoxuexi1995.github.io//2017/09/05/singleton/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+          <a href="http://service.weibo.com/share.php?appkey=&title=java_单例模式应用&url=http://haohaoxuexi1995.github.io//2017/09/07/singleExample/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
               分享到微博
           </a>
       </li>
@@ -379,44 +375,19 @@
         
         
           <div class="mdui-card-media">
-            <img src="/img/random/picHD_25.png"/>
+            <img src="/img/random/picHD_44.png"/>
           </div>
         
         <div class="post-content mdui-typo no-margin" id="post-content">
-          <h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>单例模式，是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例的特殊类。<br>通过单例模式可以保证系统中一个类只有一个实例。即一个类只有一个对象实例</p>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><pre><code>&lt; 引用别人的总结
-
-适用场景： 
-    单例模式只允许创建一个对象，因此节省内存，加快对象访问速度，因此对象需要被公用的场合适合使用，如多个模块使用同一个数据源连接对象等等。如： 
-    1.需要频繁实例化然后销毁的对象。 
-    2.创建对象时耗时过多或者耗资源过多，但又经常用到的对象。 
-    3.有状态的工具类对象。 
-    4.频繁访问数据库或文件的对象。 
-以下都是单例模式的经典使用场景： 
-    1.资源共享的情况下，避免由于资源操作时导致的性能或损耗等。如上述中的日志文件，应用配置。 
-    2.控制资源的情况下，方便资源之间的互相通信。如线程池等。 
-应用场景举例： 
-    1.外部资源：每台计算机有若干个打印机，但只能有一个PrinterSpooler，以避免两个打印作业同时输出到打印机。内部资源：大多数软件都有一个（或多个）属性文件存放系统配置，这样的系统应该有一个对象管理这些属性文件 
-    2. Windows的Task Manager（任务管理器）就是很典型的单例模式（这个很熟悉吧），想想看，是不是呢，你能打开两个windows task manager吗？ 不信你自己试试看哦~ 
-    3. windows的Recycle Bin（回收站）也是典型的单例应用。在整个系统运行过程中，回收站一直维护着仅有的一个实例。 
-    4. 网站的计数器，一般也是采用单例模式实现，否则难以同步。 
-    5. 应用程序的日志应用，一般都何用单例模式实现，这一般是由于共享的日志文件一直处于打开状态，因为只能有一个实例去操作，否则内容不好追加。 
-    6. Web应用的配置对象的读取，一般也应用单例模式，这个是由于配置文件是共享的资源。 
-    7. 数据库连接池的设计一般也是采用单例模式，因为数据库连接是一种数据库资源。数据库软件系统中使用数据库连接池，主要是节省打开或者关闭数据库连接所引起的效率损耗，这种效率上的损耗还是非常昂贵的，因为何用单例模式来维护，就可以大大降低这种损耗。 
-    8. 多线程的线程池的设计一般也是采用单例模式，这是由于线程池要方便对池中的线程进行控制。 
-    9. 操作系统的文件系统，也是大的单例模式实现的具体例子，一个操作系统只能有一个文件系统。 
-    10. HttpApplication 也是单位例的典型应用。熟悉ASP.Net(IIS)的整个请求生命周期的人应该知道HttpApplication也是单例模式，所有的HttpModule都共享一个HttpApplication实例.
-</code></pre><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code>开始单例之前我们来看一个问题:下面是一个太阳类
-</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Sun &#123;</div><div class="line">	public void <span class="function"><span class="title">light</span></span>()&#123;</div><div class="line">		System.out.println(<span class="string">"太阳会发光,阳光普照"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>我们再进行一个测试:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Sun sun1=new Sun();</div><div class="line">		System.out.println(sun1);</div><div class="line">		Sun sun2=new Sun();</div><div class="line">		System.out.println(sun2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>结果为:         singleton.Sun@7f39ebdb<br>            singleton.Sun@33abb81e<br>通过结果可以看出,Sun1 和 sun2 不是同一个对象,但是太阳不是只有唯一一个???所以为了弥补这个问题,我们就需要设计一个类,让其只能产生一个唯一的太阳,既然是一个唯一的,所以我们就不能让用户随便的调用构造方法(用户调用构造方法可以无限的创建对象),于是我们将构造方法私有了.其次,没有了构造方法,用户就不能通过类创建对象进而使用类了,怎么办呢?那我们就应该提供一个方法,这个方法可以为用户提供一个我们在类中已经提供好的对象,所以代码如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Sun &#123;</div><div class="line">	//static 是因为getInstance()是static的,</div><div class="line">	//随着类的加载而加载，即使此类还未new过对象，这个类变量也存在，而且仅一份。</div><div class="line">	private static Sun sun=new Sun();</div><div class="line">	private <span class="function"><span class="title">Sun</span></span>()&#123;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	//static 是因为static之后这个方法就不属于对象了,可通过类名调用</div><div class="line">	public static Sun <span class="function"><span class="title">getInstance</span></span>()&#123;</div><div class="line">		<span class="built_in">return</span> sun;</div><div class="line">	&#125;</div><div class="line">	public void <span class="function"><span class="title">light</span></span>()&#123;</div><div class="line">		System.out.println(<span class="string">"太阳会发光,阳光普照"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>通过类名.getInstance(),我们可以获得Sun的一个对象,由于这是个静态变量,所以随着类的加载而加载,而且仅一份。保证了是同一个对象.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Sun sun1=Sun.getInstance();</div><div class="line">		System.out.println(sun1);</div><div class="line">		Sun sun2=Sun.getInstance();</div><div class="line">		System.out.println(sun2);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>结果:     singleton.Sun@7f39ebdb<br>        singleton.Sun@7f39ebdb<br>好,现在是一个太阳了…这种创建单例的写法我们也叫做饿汉式,为什么?因为在类初始化时，已经自行实例化(感觉很饿的样子),不管你的对象是否为空.饿汉式在类创建的同时就已经创建好一个静态的对象供系统使用,以后不再改变,所以天生是线程安全的.<br>而且由于对象创建好了,所以反应速度快,(推荐使用).<br>但是单例模式还有一种懒汉式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Sun &#123;</div><div class="line">	private static Sun sun;</div><div class="line">	private <span class="function"><span class="title">Sun</span></span>()&#123;	</div><div class="line">	&#125;</div><div class="line">	public static Sun <span class="function"><span class="title">getInstance</span></span>()&#123;</div><div class="line">		<span class="keyword">if</span>(sun==null)&#123;</div><div class="line">			sun=new Sun();</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> sun;</div><div class="line">	&#125;</div><div class="line">	public void <span class="function"><span class="title">light</span></span>()&#123;</div><div class="line">		System.out.println(<span class="string">"太阳会发光,阳光普照"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>懒汉式就是开始不自行实例化,当我们需要的时候,先判断是否为空,为空才实例化,不为空直接返回.但是在多线程情况下,这是有线程安全问题的,比如当Sun还没初始化的时候,几个线程同时调用getInstance()方法,给Sun初始化,造成内存中不止一个Sun对象,这就可能使单例失败.最简单的方法是在getInstance()方法上加一个synchronized修饰符,如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">public static synchronized Sun <span class="function"><span class="title">getInstance</span></span>()&#123;</div><div class="line">	<span class="keyword">if</span>(sun==null)&#123;</div><div class="line">		sun=new Sun();</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> sun;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>当一个线程进入getInstance()时,就将此方法锁住,别的线程无法进来,就无法造成同时初始化的情况.但是,安全是安全了,由于方法被锁住,每次访问这个方法的时候,就只能让一个进入,另外的在外面等待,就带来的性能影响。所以,这种是并不可取的,所以我们不是还有一种锁住的方法吗,如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">public static Sun <span class="function"><span class="title">getInstance</span></span>()&#123;</div><div class="line">	<span class="keyword">if</span>(sun==null)&#123;</div><div class="line">		//1</div><div class="line">		synchronized(Sun.class)&#123;</div><div class="line">			sun=new Sun();</div><div class="line">		&#125;</div><div class="line">	&#125;		</div><div class="line">	<span class="built_in">return</span> sun;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这样,我们只锁住初始化的这段,貌似的样子(只有当第一次实例化的时候锁住,防止了同时实例化,当sun已经存在的时候,就可以随时进来拿了).但是不知你想过没得,这种情况也有问题,如果刚开始没初始化,AB都为空,都进去我在代码中标注的1里面,于是A再进入锁住的内容中,初始化一次,A完过后,B再进入其中,再次初始化一次,这就造成了单例失败,所以我们可以这样:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public static  Sun <span class="function"><span class="title">getInstance</span></span>()&#123;</div><div class="line">	<span class="keyword">if</span>(sun==null)&#123;</div><div class="line">		synchronized(Sun.class)&#123;</div><div class="line">			<span class="keyword">if</span>(sun==null)&#123;</div><div class="line">				sun=new Sun();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;	</div><div class="line">	<span class="built_in">return</span> sun;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>双重检查,由于当A出来的时候,已经存在sun了,所以B就不会通过第二重检查,就不会再次new了,而且,以后进入的时候,由于sun!=null(没锁就不会等待),就直接返回sun,是不是就解决了性能问题,这就是双重检查的懒汉式.但是懒汉式还有一种静态内部类方式:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Sun &#123;</div><div class="line">	private static class LazyHolder &#123;    </div><div class="line">	       private static final Sun sun = new Sun();    </div><div class="line">	&#125; </div><div class="line">	private <span class="function"><span class="title">Sun</span></span>()&#123;</div><div class="line">	&#125;</div><div class="line">	public static  Sun <span class="function"><span class="title">getInstance</span></span>()&#123;</div><div class="line">		<span class="built_in">return</span> LazyHolder.sun;</div><div class="line">	&#125;</div><div class="line">	public void <span class="function"><span class="title">light</span></span>()&#123;</div><div class="line">		System.out.println(<span class="string">"太阳会发光,阳光普照"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>这种也实现了线程安全,又避免了同步带来的性能影响.由于java中内部类加载时间：一般是只有运行到了才会初始化，而不是外部内加载的时候（不管是静态还是非静态内部类）,所以当我们调用getInstance()的时候,初始化内部类,顺带初始化sun,这是不是懒汉式(我们用到的时候才初始化)?但是单例模式除了懒汉和饿汉,还有一种登记式单例,但用的很少,可以忽略。</p>
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>各种语言都有自己所支持的配置文件类型。Java 支持的是.properties 文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#以下为学生信息</span></div><div class="line">name=lihua</div></pre></td></tr></table></figure></p>
+<p>properties 文件。其中# 表示的是注释信息；等号“= ”左边的我们称之为key ；等号“= ”右边的我们称之为value 。（其实就是我们常说的键- 值对）key 应该是我们程序中的变量。而value 是我们根据实际情况配置的。</p>
+<h3 id="解析-properties-文件"><a href="#解析-properties-文件" class="headerlink" title="解析.properties 文件"></a>解析.properties 文件</h3><p>java中有解析java.util.Properties 类,那我们现在写一个A类来解析一个名为:config.properties 文件<br>不了解Properties类的可以自己去查一下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">import java.io.IOException;</div><div class="line">import java.util.Properties;</div><div class="line">public class A &#123;</div><div class="line">	public void <span class="function"><span class="title">getProperties</span></span>()&#123;</div><div class="line">		//创建一个properties对象</div><div class="line">		Properties properties=new Properties();</div><div class="line">		try &#123;</div><div class="line">			//加载配置</div><div class="line">			properties.load(A.class.getResourceAsStream(<span class="string">"config.properties"</span>));</div><div class="line">			//通过配置获得属性值</div><div class="line">			String name=properties.getProperty(<span class="string">"name"</span>);</div><div class="line">			System.out.println(name);</div><div class="line">		&#125; catch (IOException e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这时我们的B类也需要获得配置文件中的配置信息,那我们再写一个B类,和A类一样:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">import java.io.IOException;</div><div class="line">import java.util.Properties;</div><div class="line">public class B &#123;</div><div class="line">	public void <span class="function"><span class="title">getProperties</span></span>()&#123;</div><div class="line">		//创建一个properties对象</div><div class="line">		Properties properties=new Properties();</div><div class="line">		try &#123;</div><div class="line">			//加载配置</div><div class="line">			properties.load(A.class.getResourceAsStream(<span class="string">"config.properties"</span>));</div><div class="line">			//通过配置获得属性值</div><div class="line">			String name=properties.getProperty(<span class="string">"name"</span>);</div><div class="line">			System.out.println(name);</div><div class="line">		&#125; catch (IOException e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>测试一下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		A a=new A();</div><div class="line">		a.getProperties();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果为:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lihua</div><div class="line">lihua</div></pre></td></tr></table></figure></p>
+<p>不知现在你想过没得,config.properties只有一个,但是Properties对象实例却有两个,如果我们以后C类也需要使用配置文件,那么不是还要在创建一个Properties的对象?这显然是不合理的.怎么才能让Properties的对象只有一个呢?没错,单例模式,但是,Properties是jdk的类,已经不是单例设计了,我们不能更改这个源码,那怎么办呢?我们可以写一个Config类,通过它创建唯一的Properties类对象.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">import java.io.IOException;</div><div class="line">import java.util.Properties;</div><div class="line">public class Config &#123;</div><div class="line">	private static Properties properties=new Properties();</div><div class="line">	private static Config config=new Config();</div><div class="line">	private <span class="function"><span class="title">Config</span></span>()&#123;</div><div class="line">		try &#123;</div><div class="line">			properties.load(A.class.getResourceAsStream(<span class="string">"config.properties"</span>));</div><div class="line">		&#125; catch (IOException e) &#123;</div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	public static String getValue(String name)&#123;</div><div class="line">		<span class="built_in">return</span> properties.getProperty(name);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>当类加载的时候,会先加载Properties的对象(独一无二的),接着加载Config对象(独一无二的),加载的时候会调用Config的构造方法,于是将properties的以后任务完成,现在就保证了不管好多类调用,Properties实例只会存在一个,而且配置文件也是加载了的,但是注意不能讲Config的初始放在Properties初始之上,否则会报空指针异常(Config在之上的时候new的时候Properties实例还不存在,再调用load会出错),getValue方法可以获得配置文件中的属性值.以下是测试文件:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">package singleton;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		String a=Config.getValue(<span class="string">"name"</span>);</div><div class="line">		System.out.println(a);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果:lihua,单例还有很多应用,等你慢慢去发现.</p>
 <p><strong>若有不足,请批评指正</strong></p>
 
         </div>
@@ -430,10 +401,10 @@
               
             </span>
             <br />
-            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/05/singleton/">http://haohaoxuexi1995.github.io/2017/09/05/singleton/</a></span>
+            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/07/singleExample/">http://haohaoxuexi1995.github.io/2017/09/07/singleExample/</a></span>
             
               <br />
-              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/05/singleton/singleton.md">http://haohaoxuexi1995.github.io/2017/09/05/singleton/singleton.md</a></span>
+              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/07/singleExample/singleExample.md">http://haohaoxuexi1995.github.io/2017/09/07/singleExample/singleExample.md</a></span>
             
           </div>
         
@@ -480,8 +451,8 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/05/singleton/';  // Replace PAGE_URL with your page's canonical URL variable
-      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/05/singleton/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/07/singleExample/';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/07/singleExample/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     (function() { // DON'T EDIT BELOW THIS LINE
       var d = document, s = d.createElement('script');
@@ -503,35 +474,25 @@
           mdui-color-theme
         
         ">
-          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#定义"><span class="post-toc-number">1.<span class="post-toc-text">定义</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#使用场景"><span class="post-toc-number">2.<span class="post-toc-text">使用场景</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#代码实现"><span class="post-toc-number">3.<span class="post-toc-text">代码实现</span></span></a></a></ul>
+          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#介绍"><span class="post-toc-number">1.<span class="post-toc-text">介绍</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#解析-properties-文件"><span class="post-toc-number">2.<span class="post-toc-text">解析.properties 文件</span></span></a></a></ul>
         </div>
       
     </div>
   </div>
   <div class="post-pagination mdui-color-theme">
   
-    <div class="prev mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/07/singleExample/" class="content no-text-decoration mdui-text-left">
-        <div>
-          <i class="mdui-icon material-icons mdui-text-center">&#xe5cb;</i>
-          <span class="mdui-typo-body-2-opacity mdui-text-center">新的文章</span>
-        </div>
-        <div class="mdui-typo-title mdui-text-truncate">
-          java_单例模式应用
-        </div>
-      </a>
-    </div>
+    <div class="flex-spacer mdui-hidden-xs"></div>
   
 
   
     <div class="next mdui-ripple mdui-color-theme mdui-valign">
-      <a href="/2017/09/04/decorator/" class="content no-text-decoration mdui-text-right">
+      <a href="/2017/09/05/singleton/" class="content no-text-decoration mdui-text-right">
         <div>
           <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
           <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
         </div>
         <div class="mdui-typo-title mdui-text-truncate">
-          java_装饰者模式
+          java_单例模式
         </div>
       </a>
     </div>
@@ -543,7 +504,7 @@
   <i class="mdui-icon material-icons">&#xe242;</i>
 </button>
 <ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
-  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用场景"><span class="toc-number">2.</span> <span class="toc-text">使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">3.</span> <span class="toc-text">代码实现</span></a></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解析-properties-文件"><span class="toc-number">2.</span> <span class="toc-text">解析.properties 文件</span></a></li></ol>
 </ul>
 
 
@@ -670,7 +631,7 @@
   <!-- content warning -->
 <script type="text/ls-javascript" id="content-warning-script">
   (function() {
-    var postLastModifiedDate = 1504709443225
+    var postLastModifiedDate = 1504798081953
     var today = (new Date()).getTime()
     var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
     if (difference >= 100) {
