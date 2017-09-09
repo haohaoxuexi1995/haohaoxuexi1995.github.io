@@ -35,11 +35,50 @@ public class BubbleSort {
 ```
 测试:
 ``` bash
-import java.util.Arrays;
 public class Test {
 	public static void main(String[] args) {
 		int[] a={12,10,18,6,21,133,56,0,2,32,65,52,24,34,57,24,39,25,100,598,014,23,42,2};
 		new BubbleSort().Sort(a);
+		for (int i : a) {
+			System.out.print(i+",");
+		}
+	}
+}
+```
+结果:0,2,2,6,10,12,12,18,21,23,24,24,25,32,34,39,42,52,56,57,65,100,133,598,
+
+### 选择排序
+
+对于给定的一组记录，经过第一轮比较后得到最小的记录，然后将该记录与第一个记录的位置进行交换；接着对不包括第一个记录以外的其他记录进行第二轮比较，得到最小的记录并与第二个记录进行位置交换；重复该过程，直到进行比较的记录只有一个时为止。
+比如12,10,18,6,21,
+先将第一个数的下标存入index中,所以index=0,第一次在10,18,6,21中选出10与12比较,小的话就将10的下标1存入index中,此时index=1,然后18与10比较,就这样进行一轮,最后判断index下标是不是刚开始存入的值,不是的话交换位置,所以第一次过后为6,10,18,12,21,第二趟在18,12,21将index初始为1,和上面一样的方法,结果还为6,10,18,12,21,不断重复,直到排序完成.总共进行n-1次,第一次比较进行n-1次,每进行一次,比较次数会相应减少一次.
+
+选择排序的最佳时间复杂度为O(n^2),选择排序的最坏时间复杂度为O(n^2),选择排序总的平均时间复杂度为O(n^2),且选择排序是一种不稳定排序算法。
+``` bash
+public class SelectionSort {
+	public void sort(int[] a){
+		for(int i=0;i<a.length-1;i++){
+			int index=i;
+			for(int j=i+1;j<a.length;j++){
+				if(a[j]<a[index]){
+					index=j;
+				}
+			}
+			if(index!=i){
+				int temp=a[i];
+	            a[i]=a[index];
+	            a[index]=temp;
+			}
+		}
+	}
+}
+```
+测试:
+``` bash
+public class Test {
+	public static void main(String[] args) {
+		int[] a={12,10,18,6,21,133,56,0,2,32,65,52,24,34,57,24,39,25,100,598,014,23,42,2};
+		new SelectionSort().Sort(a);
 		for (int i : a) {
 			System.out.print(i+",");
 		}
