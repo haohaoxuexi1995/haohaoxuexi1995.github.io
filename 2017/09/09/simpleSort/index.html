@@ -18,7 +18,7 @@
         https://github.com/Halyul/hexo-theme-mdui
         Version: 1.4.9 -->
   <meta charset="UTF-8">
-  <title>分类: 数据结构java - Blog</title>
+  <title>java_简单排序算法 - Blog</title>
 
   <!-- Favicons -->
   <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
@@ -40,7 +40,7 @@
 
   <meta name="author" content="何磊">
   
-  <meta name="keywords" content="blog, hexo, mdui">
+  <meta name="keywords" content="blog, hexo, mdui,后端">
 
   <!--iOS -->
   <meta name="apple-mobile-web-app-title" content="Blog">
@@ -55,11 +55,11 @@
   <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://haohaoxuexi1995.github.io">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="分类: 数据结构java - Blog | Blog">
+  <meta property="og:title" content="java_简单排序算法 - Blog | Blog">
   <meta property="og:image" content="/img/photo.jpg" />
   
 
-    
+    <meta property="og:article:tag" content="后端"> 
 
   <!-- Cache -->
   <meta http-equiv="Cache-Control" content="max-age=7200" />
@@ -105,9 +105,7 @@
   
     mdui-drawer-body-left
   
-  
-    side-content style-fix
-   drawer-overlay-none" onresize="styleChanging()">
+   drawer-overlay-none" >
 
 
   
@@ -127,21 +125,9 @@
         <a href="/" class="mdui-typo-headline">
           INDEX
         </a>
-        <span class="appbar-border-line mdui-hidden-xs"></span>
       
-      <span class="mdui-typo-title
-      "
       
-        onclick="smoothScroll.animateScroll( 0 );"
-      >
-        数据结构java
-      </span>
-      
-      <div class="mdui-toolbar-spacer"
-        
-          onclick="smoothScroll.animateScroll( 0 );"
-        
-      ></div>
+      <div class="mdui-toolbar-spacer"></div>
       
       
 
@@ -160,9 +146,6 @@
   </div>
 </div>
 
-      
-        <button class="mdui-btn mdui-ripple mdui-btn-icon style-fix"><i class="mdui-icon material-icons">&#xe80d;</i></button>
-      
     </div>
   </div>
 
@@ -173,10 +156,8 @@
 
   
   <div class="mdui-drawer drawer-container
-  
-    mdui-drawer-full-height mdui-drawer-close drawer-fix
   " id="drawer" style="z-index: 2001;">
-  <div class="drawer-head mdui-valign ">
+  <div class="drawer-head mdui-valign mdui-hidden-md-up">
   <div class="mdui-typo-title-opacity">INDEX</div>
   <div class="flex-spacer"></div>
   <button class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer-close><i class="mdui-icon material-icons">&#xe314;</i></button>
@@ -212,7 +193,7 @@
 
   <div class="mdui-list no-padding-top" mdui-collapse="{accordion: true}" mdui-collapse>
     
-      <div class="mdui-collapse-item mdui-collapse-item-open">
+      <div class="mdui-collapse-item ">
         <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
           <i class="mdui-list-item-icon mdui-icon material-icons">&#xe86e;</i>
           <div class="mdui-list-item-content">分类</div>
@@ -315,24 +296,44 @@
 
 
 
+
+<main>
   
 
-  <style id="side_content_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("side_content_css","/css/src/plus/side_content.min.css?I3AiJmqczd8wYmijb8bxag==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
-<div id="side-content" class="mdui-color-deep-orange animate-drawer">
-  <div class="mdui-grid-tile" style="overflow: visible;">
-    <div class="bg">
-      <img src="/img/random/picHD_42.png" />
-    </div>
-    <div class="mdui-grid-tile-actions mdui-grid-tile-actions-top mdui-grid-tile-actions-gradient">
-      <div class="flex-spacer"></div>
-      <div class="mdui-grid-tile-buttons">
-        
-  <button class="mdui-btn mdui-ripple mdui-btn-icon mdui-float-right" mdui-menu="{target: '#menu-page-share'}"><i class="mdui-icon material-icons">&#xe80d;</i></button>
+  <style id="post_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("post_css","/css/src/plus/post.min.css?lbQgTsUgcyos26e49AY7PA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
-  <ul class="mdui-menu" id="menu-page-share">
+<style id="lightgallery_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("lightgallery_css","/css/src/lightgallery.min.css?k96yraexoRn3+CTmPycWNA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
 
+
+<style>
+  .lg-outer .lg-item {
+    background-image: url("/img/loading.gif");
+  }
+</style>
+<div class="post-warpper animate-post">
+  <div class="post-bg-color
     
+  "></div>
+  <div class="post-header
+    
+  ">
+    <div class="post-header-container">
+      <div class="post-title mdui-text-truncate">java_简单排序算法</div>
+      <div class="post-actions mdui-valign">
+        <div>
+          <span>编写时间：</span>
+          <span style="float: right">9月 09, 2017</span>
+          
+        </div>
+        
+
+        
+  <button class="mdui-btn mdui-ripple mdui-btn-icon" mdui-menu="{target: '#menu-post-share'}">
+    <i class="mdui-icon material-icons">&#xe80d;</i>
+  </button>
+
+  <ul class="mdui-menu" id="menu-post-share">
 
     
 
@@ -342,7 +343,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=数据结构java&title=数据结构java&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io//categories/数据结构java/index.html" target="_blank" class="mdui-ripple">
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=Blog&title=java_简单排序算法&summary=&pics=http://haohaoxuexi1995.github.io/img/favicon.png&url=http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/index.html" target="_blank" class="mdui-ripple">
               分享到QQ
           </a>
       </li>
@@ -354,7 +355,7 @@
 
     
       <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share.php?appkey=&title=数据结构java&url=http://haohaoxuexi1995.github.io//categories/数据结构java/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
+          <a href="http://service.weibo.com/share.php?appkey=&title=java_简单排序算法&url=http://haohaoxuexi1995.github.io//2017/09/09/simpleSort/index.html&pic=&searchPic=false&style=simple" target="_blank" class="mdui-ripple">
               分享到微博
           </a>
       </li>
@@ -366,106 +367,152 @@
       </div>
     </div>
   </div>
-  <div class="content">
-    <img class="mdui-img-circle avatar" src="/img/photo.jpg"/>
-    <div class="author mdui-text-center">
-      何磊
-    </div>
-    <div class="name">
-      数据结构java
-    </div>
-    <div class="length">
+  <div class="post-container flex-spacer
+  
+  ">
+    <div class="post-adjust">
+      <div class="mdui-card card-bottom-fix menu-fix " id="blog-post">
+        <div class="warning">
+          这篇文章最后修改于
+          <span id="content-warning"></span>
+          天之前。
+          本页内容可能已经过时！
+        </div>
+        
+        
+          <div class="mdui-card-media">
+            <img src="/img/random/picHD_44.png"/>
+          </div>
+        
+        <div class="post-content mdui-typo no-margin" id="post-content">
+          <h3 id="简单排序算法"><a href="#简单排序算法" class="headerlink" title="简单排序算法"></a>简单排序算法</h3><p>简单排序一般指冒泡排序,选择排序,直接插入排序.</p>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>冒泡排序（Bubble Sort）,是一种计算机科学领域的较简单的排序算法.<br>它重复地走访过要排序的数列,一次比较两个元素,如果他们的顺序错误就把他们交换过来.走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成.</p>
+<p>比如12,10,18,6,21<br>第一次比较12与10,12比10大,交换两个位置,然后现在变成了10,12,18,6,21,然后继续比较12与18,18大于12,位置不变,还是12,10,18,6,21,接着比较18与6,18大于6,交换位置,变成12,10,6,18,21,然后比较18与21,21大,位置不变,现在就完成一次,将最大的移动到了最后,然后再从第一个开始,重复刚才的动作,总共会进行n(数组长度)-1次,第一次比较为n-1次,每进行一次,交换次数会相应减少一次.</p>
+<p>冒泡排序的最佳时间复杂度为O(n),冒泡排序的最坏时间复杂度为O(n^2),冒泡排序总的平均时间复杂度为O(n^2),且冒泡排序是一种稳定排序算法。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class BubbleSort &#123;</div><div class="line">	public void Sort(int[] a)&#123;</div><div class="line">		<span class="keyword">for</span> (int i = 0; i &lt; a.length-1; i++) &#123;</div><div class="line">			<span class="keyword">for</span> (int j = 0; j &lt; a.length-i-1; j++) &#123;</div><div class="line">				<span class="keyword">if</span>(a[j]&gt;a[j+1])&#123;</div><div class="line">					int temp=a[j];</div><div class="line">					a[j]=a[j+1];</div><div class="line">					a[j+1]=temp;		</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>测试:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">import java.util.Arrays;</div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] a=&#123;12,10,18,6,21,133,56,0,2,32,65,52,24,34,57,24,39,25,100,598,014,23,42,2&#125;;</div><div class="line">		new BubbleSort().Sort(a);</div><div class="line">		<span class="keyword">for</span> (int i : a) &#123;</div><div class="line">			System.out.print(i+<span class="string">","</span>);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>结果:0,2,2,6,10,12,12,18,21,23,24,24,25,32,34,39,42,52,56,57,65,100,133,598,</p>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3>
+        </div>
+
+        
+          <div class="license mdui-typo">
+            <span>
+              本文许可协议：
+              
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY-NC-SA 4.0</a>
+              
+            </span>
+            <br />
+            <span>本文永久链接：<a href="http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/">http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/</a></span>
+            
+              <br />
+              <span>本文Markdown：<a href="http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/simpleSort.md">http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/simpleSort.md</a></span>
+            
+          </div>
+        
+
+        
+          <div class="posts-info">
+            
+            <div class="flex-spacer"></div>
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon material-icons">&#xe149;</i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/categories/java算法/">
+                    <span>java算法</span>
+                  </a>
+                
+              </div>
+            
+            
+              <div class="mdui-chip">
+                <span class="mdui-chip-icon"><i class="mdui-icon mdui-text-color-black-icon fa fa-tags"></i></span>
+              </div>
+              <div class="content mdui-typo">
+                
+                  <a href="/tags/后端/">
+                    <span>后端</span>
+                  </a>
+                
+              </div>
+            
+          </div>
+        
+        
+          
+            <div class="posts-line">
+              <div class="mdui-divider"></div>
+            </div>
+            <div class="post-comment">
+              
+
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = 'http://haohaoxuexi1995.github.io/2017/09/09/simpleSort/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = '//.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>请启用JavaScript以查看<a href="https://disqus.com/?ref_noscript">来自Disqus的评论</a></noscript>
+
+
+            </div>
+          
+        
+      </div>
       
-      1篇文章
-    </div>
-  </div>
-</div>
-<div id="contentLocation"></div>
-
-
-
-<main>
-  <div class="posts-container column-3">
-
-</div>
-<div id="content-list" class="animate-post">
-  
-    <div class="content-item">
+        <div id="card-toc" class="
+        
+          mdui-color-theme
+        
+        ">
+          <ul class="mdui-list post-toc"><a class="mdui-list-item mdui-ripple post-toc-link" href="#简单排序算法"><span class="post-toc-number">1.<span class="post-toc-text">简单排序算法</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#冒泡排序"><span class="post-toc-number">2.<span class="post-toc-text">冒泡排序</span></span></a></a><a class="mdui-list-item mdui-ripple post-toc-link" href="#选择排序"><span class="post-toc-number">3.<span class="post-toc-text">选择排序</span></span></a></a></ul>
+        </div>
       
+    </div>
+  </div>
+  <div class="post-pagination mdui-color-theme">
   
-<style id="index_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("index_css","/css/src/plus/index.min.css?WYKJSRDQmvHqC3U1Wgs23g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
-<div class="mdui-card card-bottom-fix  mdui-center">
-  <div class="posts-title mdui-typo">
-    <a href="/2017/09/04/xianxingbiao/" target="_self">
-      
-      java_线性表
-    </a>
-  </div>
-  <div class="posts-line">
-    <div class="mdui-divider"></div>
-  </div>
-  <div class="posts-content">
-    线性表是最基本、最简单、也是最常用的一种数据结构。
+    <div class="flex-spacer mdui-hidden-xs"></div>
+  
 
-  </div>
   
-    <div class="mdui-card-media">
-      <img src="/img/random/picHD_32.png"/>
+    <div class="next mdui-ripple mdui-color-theme mdui-valign">
+      <a href="/2017/09/09/AlgorithmAnalyse/" class="content no-text-decoration mdui-text-right">
+        <div>
+          <span class="mdui-typo-body-2-opacity mdui-text-center">旧的文章</span>
+          <i class="mdui-icon material-icons mdui-text-center">&#xe5cc;</i>
+        </div>
+        <div class="mdui-typo-title mdui-text-truncate">
+          java_算法分析
+        </div>
+      </a>
     </div>
-  
-  <div class="posts-bottom">
     
-      <div class="mdui-chip">
-        <span class="mdui-chip-icon"><i class="mdui-icon
-        
-          mdui-text-color-black-icon
-        
-         material-icons mdui-text-center">&#xe149;</i></span>
-      </div>
-      <div class="content mdui-typo">
-        
-          <a href="/categories/数据结构java/">
-            <span>数据结构java</span>
-          </a>
-        
-      </div>
-    
-    
-      <div class="mdui-chip">
-        <span class="mdui-chip-icon"><i class="mdui-icon
-        
-          mdui-text-color-black-icon
-        
-         fa fa-tags mdui-text-center"></i></span>
-      </div>
-      <div class="content mdui-typo">
-        
-          <a href="/tags/后端/">
-            <span>后端</span>
-          </a>
-        
-      </div>
-    
-    <div class="flex-spacer"></div>
-    <div class="mdui-typo-caption-opacity mdui-valign">
-      <span>9月 04, 2017</span>
-    </div>
-  </div>
 </div>
 
-
-
-    </div>
   
-</div>
-
-
-
-
-<button id="toTop" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-fab-hide" style="z-index: 9;" onclick="smoothScroll.animateScroll( 0 );">
-  <i class="mdui-icon material-icons">&#xe5d8;</i>
+    <button id="button-toc" class="mdui-fab mdui-color-theme-accent mdui-ripple mdui-fab-fixed mdui-hidden-md-up" style="z-index: 9;" mdui-menu="{target: '#menu-toc', fixed: true}">
+  <i class="mdui-icon material-icons">&#xe242;</i>
 </button>
+<ul class="mdui-menu mdui-typo no-margin-bottom auto-width" id="menu-toc" style="padding: 8px;max-height: 80%">
+  <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#简单排序算法"><span class="toc-number">1.</span> <span class="toc-text">简单排序算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#冒泡排序"><span class="toc-number">2.</span> <span class="toc-text">冒泡排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择排序"><span class="toc-number">3.</span> <span class="toc-text">选择排序</span></a></li></ol>
+</ul>
 
+
+  
+
+</div>
 
 </main>
 
@@ -503,120 +550,113 @@
 </script>
 
 
-
-
-
-
-  
-  <script type="text/javascript">
-    (function() {
-      var items = document.querySelectorAll("div#content-list .content-item");
-      var list = document.querySelector("div.posts-container");
-      var columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
-      var level = 4;
-      var sm = 1;
-      var column1Width = 1024;
-      var column2Width = 1400;
-      list.innerHTML = "";
-      function cleanUpdate() {
-        items = document.querySelectorAll("div#content-list .content-item");
-        list.innerHTML = '';
-        columns = [document.createElement("div"), document.createElement("div"), document.createElement("div")];
-        level = 4;
-        updateList();
-      }
-      window.postListCleanUpdate = cleanUpdate;
-      function getColumnNums() {
-        if (document.body.clientWidth <= column1Width) {
-          return 1
-        }
-        if (document.body.clientWidth <= column2Width) {
-          return 2
-        }
-        return 3
-      }
-      function updateList() {
-        var ColumnNums = getColumnNums();
-        if (level == ColumnNums) return;
-        level = ColumnNums;
-        list.setAttribute("class", "column-" + ColumnNums + " posts-container animate-post")
-        Array.prototype.forEach.call(items, function(value, index) {
-          var to = index % ColumnNums;
-          columns[to].appendChild(value);
+  <script type="text/ls-javascript" id="toc-active-script">
+  if (document.querySelector('ul#menu-toc > ol') !== null && document.querySelector('div#card-toc > ul') !== null) {
+    window.addEventListener("load", function() {
+      var timer;
+      function doWork() {
+        listens.forEach(function(value, index) {
+          value[1]();
+          value[0].classList.remove("mdui-list-item-active");
         })
-        columns.forEach(function(value) {
-          list.appendChild(value)
-        })
+        let actionToc = (listens[listens.reduce(function(r, v, index) {
+          if (v[2] == true) {
+            return index;
+          } else return r;
+        }, undefined)] || [])[0] || listens[0][0];
+        actionToc.classList.add("mdui-list-item-active");
+        if(actionToc.getClientRects().length == 0)return;
+        showToc(actionToc);
       }
-      window.addEventListener("resize", updateList);
-      updateList();
-    })()
-  </script>
 
-
-
-
-
-  <script type="text/ls-javascript" id="style-changing-script">
-  var content_flag = false;
-  var appbar = document.querySelector('div#blog-appbar')
-  var body = document.querySelector('body')
-
-  window.addEventListener('scroll', function() {
-    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    var divTop = document.querySelector('div#contentLocation').offsetTop
-    var contentLocation = divTop - scrollTop - 56;
-
-    if (!content_flag && contentLocation < 0 && window.innerWidth < 860) {
-      appbar.classList.add('style-fix');
-      body.classList.remove('style-fix');
-      content_flag = true;
-    } else if (content_flag && contentLocation >= 0 && window.innerWidth < 860) {
-      appbar.classList.remove('style-fix');
-      body.classList.add('style-fix');
-      content_flag = false;
-    };
-  })
-
-  function styleChanging() {
-    var hide = new mdui.Headroom('div#blog-appbar');
-    var windowWidth = window.innerWidth,
-      toLeftWidth = 860;
-    if (windowWidth < toLeftWidth) {
-      hide.enable();
-    } else {
-      hide.disable();
-    }
-  };
-  styleChanging();
+      function showToc(toc) {
+        let offsetTop = toc.getClientRects()[0].top - cardToc.getClientRects()[0].top - 40;
+        let offsetBottom = toc.getClientRects()[0].bottom - cardToc.getClientRects()[0].bottom + 40;
+        let offset = 0;
+        if (offsetTop < 0) offset = offsetTop;
+        if (offsetBottom > 0) offset = offsetBottom;
+        var targetTop = Math.max(0, Math.min(cardToc.scrollTop + offset, toclist.offsetHeight - cardToc.offsetHeight));
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var now = cardToc.scrollTop;
+          var speed = (targetTop - now) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+          if (Math.abs(now - targetTop) < 1) {
+            clearInterval(timer);
+          }
+          cardToc.scrollTop = now + speed;
+        }, 30);
+      }
+      var listens = [];
+      var cardToc = document.querySelector('#card-toc');
+      var links = document.querySelectorAll("a.post-toc-link");
+      var toclist = document.querySelector("#card-toc > ul");
+      Array.prototype.forEach.call(links, function(value, index) {
+        var id = (value.getAttribute("href") || "#").slice(1);
+        var element = document.getElementById(id);
+        listens.push([value, function() {
+          var readed = false;
+          var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+          if (element.offsetTop <= scrollTop + element.clientHeight + 64) {
+            readed = true;
+          } else {
+            readed = false;
+          }
+          listens[index][2] = readed;
+        }, false])
+      })
+      doWork();
+      window.addEventListener("scroll", doWork)
+    });
+  }
 </script>
 
-
-
-
-
-
-  <script type="text/ls-javascript" id="to-top-script">
-  /* fab */
-  (function() {
-    var pageFlag = false;
-    var fab = new mdui.Fab('#toTop');
-    fab.hide();
-    window.addEventListener('scroll', function() {
-      var bodyTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-      var divTop = document.querySelector('div#top').offsetTop
-      var pageLocation = divTop - bodyTop;
-      if (!pageFlag && pageLocation < 0) {
-        fab.show();
-        pageFlag = true;
-      } else if (pageFlag && pageLocation >= 0) {
-        fab.hide();
-        pageFlag = false;
-      }
+  <script type="text/ls-javascript" id="post-lg-script">
+  var images = document.querySelectorAll('#post-content img')
+  for (i = 0; i < images.length; i++) {
+    images[i].addEventListener("click", openLG);
+  }
+  function openLG() {
+    var img_src = this.getAttribute('src');
+    var img_alt = this.getAttribute('alt');
+    lightGallery(this, {
+      dynamic: true,
+      counter: false,
+      dynamicEl: [{
+        "src": img_src,
+        'subHtml': "<span author>何磊</span> • 公开<div descr>" + img_alt + "</div>"
+      }],
     });
+  }
+</script>
+
+  <!-- content warning -->
+<script type="text/ls-javascript" id="content-warning-script">
+  (function() {
+    var postLastModifiedDate = 1504927093446
+    var today = (new Date()).getTime()
+    var difference = Math.floor((today - postLastModifiedDate)/(24*60*60*1000))
+    if (difference >= 100) {
+      document.querySelector('div.warning').style.display = 'block'
+      document.querySelector('#content-warning').textContent = difference
+    }
   })();
 </script>
 
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -624,6 +664,8 @@
   
 
 
+
+  <script>lsloader.load("lightgallery_js","/js/lightgallery.min.js?tQptxVaCRzQ3zx70gMUYig==", true)</script>
 
 
 
